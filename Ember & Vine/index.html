@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Ember & Vine | Premium Open-Flame Gastronomy & Curated Wine Pairing</title>
+  <meta name="description" content="Experience Ember & Vine, where open flame meets culinary excellence. Explore our wood-fired steaks, artisan pastas, and curated vinology pairings.">
+  <meta name="keywords" content="fine dining, open flame, restaurant, wine pairing, steakhouse, Ember & Vine, HTML5 CSS3">
+  <meta name="author" content="Ember & Vine">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <a href="#home" class="logo" id="nav-logo">Ember <span>&</span> Vine</a>
+      
+      <!-- Checkbox Hack for Pure CSS Mobile Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      
+      <label for="nav-toggle" class="nav-toggle-label" id="menu-btn">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </label>
+      
+      <nav class="nav-links" id="navigation-menu">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn-outline" style="padding: 0.6rem 1.5rem; font-size: 0.75rem; margin-left: 0.5rem;">Reserve</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <span class="hero-tagline">Rustic Flame. Refined Palette.</span>
+      <h1 id="hero-heading">Ember <span>&</span> Vine</h1>
+      <p class="hero-desc">Where the primitive element of fire converges with elegant wines to create an unforgettable culinary narrative.</p>
+      <div>
+        <a href="#contact" class="btn-primary" id="hero-cta">Reserve a Table</a>
+      </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <a href="#menu" class="scroll-indicator" id="scroll-prompt">
+      Explore
+      <span></span>
+    </a>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Signature Flavors</span>
+        <h2 class="section-title">The Culinary Craft</h2>
+        <p class="section-desc">Each plate showcases our signature wood-fire techniques, paired with robust house-infused stocks and elegant wine reduction glazes.</p>
+      </div>
+      
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Menu Card 1 -->
+        <div class="menu-card">
+          <span class="menu-card-badge">Signature</span>
+          <div class="menu-card-img-wrap">
+            <img src="images/menu_ribeye.png" alt="Wood-fired prime ribeye steak plated with asparagus" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Ember-Roasted Ribeye</h3>
+              <span class="menu-card-price">$48</span>
+            </div>
+            <p class="menu-card-desc">Prime aged ribeye, hand-carved, smoked over local hickory wood with sea salt, topped with a rich bone marrow butter, and flame-kissed baby asparagus.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-tag">Hickory Fire</span>
+              <span style="font-size: 0.8rem; color: var(--clr-gold);">Pair: Cabernet</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Card 2 -->
+        <div class="menu-card">
+          <span class="menu-card-badge">Chef's Selection</span>
+          <div class="menu-card-img-wrap">
+            <img src="images/menu_pasta.png" alt="Bowl of mushroom truffle pappardelle pasta" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Wild Mushroom Pappardelle</h3>
+              <span class="menu-card-price">$32</span>
+            </div>
+            <p class="menu-card-desc">Hand-rolled ribbon pasta, pan-roasted woodland chanterelle mushrooms, decadent white truffle butter emulsion, and shaved aged pecorino romano.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-tag">Truffle Infusion</span>
+              <span style="font-size: 0.8rem; color: var(--clr-gold);">Pair: Pinot Noir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Card 3 -->
+        <div class="menu-card">
+          <span class="menu-card-badge">House Favorite</span>
+          <div class="menu-card-img-wrap">
+            <img src="images/menu_salmon.png" alt="Pan seared vine glazed salmon with roasted vegetables" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-header">
+              <h3 class="menu-card-title">Vine-Glazed Salmon</h3>
+              <span class="menu-card-price">$38</span>
+            </div>
+            <p class="menu-card-desc">Crisp pan-seared Atlantic salmon fillet glazed in a sweet balsamic red wine reduction, served over smooth parsnip purée and roasted root vegetables.</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-tag">Balsamic Reduction</span>
+              <span style="font-size: 0.8rem; color: var(--clr-gold);">Pair: Chardonnay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Visual Journey</span>
+        <h2 class="section-title">The Dining Space</h2>
+        <p class="section-desc">From our glowing stone hearth to our intimate vine-canopied patio, step inside the modern warmth of Ember & Vine.</p>
+      </div>
+      
+      <!-- Asymmetrical CSS Grid Gallery -->
+      <div class="gallery-grid" id="photo-gallery">
+        <!-- Item 1: Tall Masonry Item -->
+        <div class="gallery-item span-row-2">
+          <img src="images/gallery_bar.png" alt="Ember & Vine premium wine cellar and bar counter" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🍷</div>
+            <h3>The Wine Cellar</h3>
+            <p>Vintage Wine & Spirits Library</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Wide Grid Item -->
+        <div class="gallery-item span-col-2">
+          <img src="images/gallery_chef.png" alt="Professional chef plating fine food next to kitchen grill flame" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔥</div>
+            <h3>The Hearth Kitchen</h3>
+            <p>Harnessing the essence of wood embers</p>
+          </div>
+        </div>
+
+        <!-- Item 3: Standard Square Item -->
+        <div class="gallery-item">
+          <img src="images/gallery_dessert.png" alt="Decadent molten chocolate lava cake plated dessert" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">✨</div>
+            <h3>Decadent Finishes</h3>
+            <p>Artisanal Warm Lava Cakes & Pastries</p>
+          </div>
+        </div>
+
+        <!-- Item 4: Standard Square Item -->
+        <div class="gallery-item">
+          <img src="images/gallery_patio.png" alt="Beautiful twilight outdoor restaurant patio dining area" loading="lazy">
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🌿</div>
+            <h3>Alfresco Evenings</h3>
+            <p>Vine-sheltered outdoor terrace</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand / Contact Info -->
+        <div class="footer-col footer-brand">
+          <a href="#home" class="logo" id="footer-logo">Ember <span>&</span> Vine</a>
+          <p>A sensory exploration of open flame gastronomy and curated vinology.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="footer-social-link" aria-label="Facebook">FB</a>
+            <a href="#" class="footer-social-link" aria-label="Twitter">TW</a>
+            <a href="#" class="footer-social-link" aria-label="TripAdvisor">TA</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu Specials</a></li>
+            <li><a href="#gallery">Inside Gallery</a></li>
+            <li><a href="#contact">Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours -->
+        <div class="footer-col">
+          <h4 class="footer-title">Hearth Hours</h4>
+          <div class="footer-contact-info">
+            <p><strong>Mon - Thurs:</strong> 5:00 PM - 10:00 PM</p>
+            <p><strong>Fri - Sat:</strong> 4:30 PM - 11:00 PM</p>
+            <p><strong>Sunday Brunch:</strong> 11:00 AM - 3:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Contact & Newsletter -->
+        <div class="footer-col">
+          <h4 class="footer-title">The Vine Society</h4>
+          <div class="footer-contact-info">
+            <p>123 Culinary Avenue, Food District</p>
+            <p><strong>Phone:</strong> (555) 234-5678</p>
+          </div>
+          <!-- Mockup newsletter -->
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Joined the Vine Society!');">
+            <input type="email" class="newsletter-input" placeholder="Join our newsletter" aria-label="Newsletter email" required>
+            <button type="submit" class="newsletter-btn" aria-label="Submit subscribe">➔</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ember & Vine. All rights reserved. Crafting wood-fired masterpieces.</p>
+        <p style="font-size: 0.8rem; letter-spacing: 1px; color: var(--clr-gold);">TERMS & CONDITIONS  |  PRIVACY POLICY</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
