@@ -1,6 +1,10 @@
 # Responsive Product Landing Page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0992fafd-fe67-4961-93f9-2dc45301e4d6/deploy-status)](https://novasound-jayanth.netlify.app)
+
 NovaSound is a sleek, modern, and fully responsive product landing page built to showcase audio equipment. Designed with a clean aesthetic, it serves as a showcase for practicing HTML5 semantic structure, advanced CSS3 styling, and modern responsive layouts.
+
+🚀 **Live Demo:** [https://novasound-jayanth.netlify.app](https://novasound-jayanth.netlify.app)
 
 ---
 
