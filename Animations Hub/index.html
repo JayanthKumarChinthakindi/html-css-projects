@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animations Hub - Premium CSS-Only Animation Gallery</title>
+  <meta name="description" content="Explore a collection of advanced, premium CSS animations, transitions, and keyframe designs built using purely HTML5 and CSS3. No JavaScript.">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Glassmorphic Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">⚡</span>Animations Hub
+      </a>
+      
+      <!-- Checkbox Hack for Pure CSS Mobile Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#loaders" class="nav-link">Loaders</a>
+        <a href="#hovers" class="nav-link">Hover Effects</a>
+        <a href="#buttons" class="nav-link">Buttons</a>
+        <a href="#cards" class="nav-link">Cards</a>
+        <a href="#text-anims" class="nav-link">Text</a>
+        <a href="#bg-showcase" class="nav-link">Backgrounds</a>
+        <a href="#footer" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <!-- Floating background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">Pure CSS Showcase</span>
+      <h1 class="hero-title">Explore Beautiful <br><span class="gradient-text">CSS Animations</span></h1>
+      <p class="hero-description">
+        A premium gallery showcasing advanced keyframe animations, responsive grid layouts, and interactive transitions. Built entirely with semantic HTML5 and CSS3—completely JavaScript-free.
+      </p>
+      <div class="hero-actions">
+        <a href="#loaders" class="btn btn-primary-glow">Explore Gallery</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-glow">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+          </svg>
+          View GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loader Animation Gallery -->
+  <section id="loaders" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Loader Animations</h2>
+        <p class="section-subtitle">Stunning processing indicators and spin patterns that render fluidly at 60 FPS.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Spinner Loader Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="spinner-loader"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Spinner Loader</h3>
+            <p class="card-desc">A classic rotating loader using dual-colored borders and infinite rotation.</p>
+            <div class="tech-tags">
+              <span>border-top</span>
+              <span>@keyframes</span>
+              <span>rotate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pulse Loader Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="pulse-loader"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Pulse Loader</h3>
+            <p class="card-desc">A deep breathing pulse circle that expands and fades out periodically.</p>
+            <div class="tech-tags">
+              <span>scale()</span>
+              <span>opacity</span>
+              <span>infinite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Three Dot Loader Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="three-dot-loader">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Three Dot Loader</h3>
+            <p class="card-desc">Staggered bouncing dots that create a typing or thinking indicator.</p>
+            <div class="tech-tags">
+              <span>animation-delay</span>
+              <span>translateY</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wave Loader Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="wave-loader">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Wave Loader</h3>
+            <p class="card-desc">Audio equalizer-style waves scale vertically with calculated delays.</p>
+            <div class="tech-tags">
+              <span>scaleY()</span>
+              <span>staggered</span>
+              <span>transform-origin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orbit Loader Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="orbit-loader">
+              <div class="orbit-center"></div>
+              <div class="orbit-satellite"></div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Orbit Loader</h3>
+            <p class="card-desc">A satellite particle orbiting a glowing central core on a circular path.</p>
+            <div class="tech-tags">
+              <span>transform-origin</span>
+              <span>box-shadow</span>
+              <span>spin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hover Effects Gallery -->
+  <section id="hovers" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Hover Effects Gallery</h2>
+        <p class="section-subtitle">Interactive micro-interactions designed to elevate standard elements into premium visual experiences.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Image Zoom Card -->
+        <div class="showcase-card hover-zoom-card">
+          <div class="preview-area no-flex">
+            <div class="zoom-image-container">
+              <div class="zoom-image"></div>
+              <span class="hover-tip">Hover Me</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Image Zoom</h3>
+            <p class="card-desc">Smooth container-clipped scaling of background images on hover state.</p>
+            <div class="tech-tags">
+              <span>overflow: hidden</span>
+              <span>scale()</span>
+              <span>cubic-bezier</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gradient Overlay Card -->
+        <div class="showcase-card hover-gradient-card">
+          <div class="preview-area no-flex">
+            <div class="gradient-overlay-container">
+              <div class="gradient-overlay-bg"></div>
+              <div class="gradient-overlay-content">
+                <span>Vibrant Shift</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gradient Overlay</h3>
+            <p class="card-desc">A dark glass panel that glows with a colorful gradient overlay on hover.</p>
+            <div class="tech-tags">
+              <span>::before</span>
+              <span>opacity</span>
+              <span>transition</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Border Draw Card -->
+        <div class="showcase-card hover-border-draw">
+          <div class="preview-area">
+            <div class="border-draw-box">
+              <span>Draw Borders</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Border Draw</h3>
+            <p class="card-desc">Animated outline drawing around the container utilizing width/height shifts.</p>
+            <div class="tech-tags">
+              <span>::before / ::after</span>
+              <span>absolute positioning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icon Rotation Card -->
+        <div class="showcase-card hover-icon-rotation">
+          <div class="preview-area">
+            <div class="rotating-icon-wrapper">
+              <svg class="gear-icon" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Icon Rotation</h3>
+            <p class="card-desc">An interactive settings gear that rotates and changes color dynamically on hover.</p>
+            <div class="tech-tags">
+              <span>rotate(180deg)</span>
+              <span>stroke-color</span>
+              <span>ease-out</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lift Card -->
+        <div class="showcase-card hover-lift-card">
+          <div class="preview-area">
+            <div class="lift-indicator">⚡</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Lift Card</h3>
+            <p class="card-desc">Elevates upward with deep drop-shadow styling and gradient border triggers.</p>
+            <div class="tech-tags">
+              <span>translateY()</span>
+              <span>box-shadow</span>
+              <span>will-change</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shine Effect Card -->
+        <div class="showcase-card hover-shine-card">
+          <div class="preview-area">
+            <div class="shine-box">
+              <span>Hover To Shine</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Shine Effect</h3>
+            <p class="card-desc">A highly reflective metallic light flash that sweeps across the card face.</p>
+            <div class="tech-tags">
+              <span>linear-gradient</span>
+              <span>skewX()</span>
+              <span>overflow: hidden</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glass Hover Card -->
+        <div class="showcase-card hover-glass-card">
+          <div class="preview-area">
+            <div class="glass-orb"></div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Glass Hover Card</h3>
+            <p class="card-desc">Increases backdrop blur and shifts border colors to blend into background glows.</p>
+            <div class="tech-tags">
+              <span>backdrop-filter</span>
+              <span>rgba border</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Cards Section -->
+  <section id="cards" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Floating Cards</h2>
+        <p class="section-subtitle">Elements styled with subtle, continuous float offsets for depth in dashboard designs.</p>
+      </div>
+
+      <!-- Floating Cards Row -->
+      <div class="floating-cards-row">
+        <!-- Floating Card 1 -->
+        <div class="floating-card float-slow">
+          <div class="floating-card-icon c-cyan">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="floating-card-title">Modular Layers</h3>
+          <p class="floating-card-desc">Separate logical views cleanly. Floating smoothly with a staggered delay timing.</p>
+        </div>
+
+        <!-- Floating Card 2 -->
+        <div class="floating-card float-medium">
+          <div class="floating-card-icon c-purple">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <h3 class="floating-card-title">Fluid Layouts</h3>
+          <p class="floating-card-desc">Flexbox layouts adapt across screens dynamically without standard lag.</p>
+        </div>
+
+        <!-- Floating Card 3 -->
+        <div class="floating-card float-fast">
+          <div class="floating-card-icon c-blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <h3 class="floating-card-title">3D Transforms</h3>
+          <p class="floating-card-desc">Full spatial rotations bring static designs into interactive 3D spaces.</p>
+        </div>
+      </div>
+
+      <!-- Flip Card Sub-Gallery (Targeted by navigation Cards link too) -->
+      <div class="section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-title">Interactive Flip Cards</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Flip Card 1 -->
+        <div class="flip-card-container">
+          <div class="flip-card-inner">
+            <div class="flip-card-front card-front-html">
+              <span class="flip-icon">🌐</span>
+              <h3>HTML5 Semantic</h3>
+            </div>
+            <div class="flip-card-back">
+              <h3>HTML5 Layouts</h3>
+              <p>Utilizes native element hierarchies (main, section, nav) to format accessible pages without div-nesting soup.</p>
+              <div class="flip-tag">Semantic SEO</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flip Card 2 -->
+        <div class="flip-card-container">
+          <div class="flip-card-inner">
+            <div class="flip-card-front card-front-css">
+              <span class="flip-icon">🎨</span>
+              <h3>CSS3 Keyframes</h3>
+            </div>
+            <div class="flip-card-back">
+              <h3>Hardware Accel</h3>
+              <p>Leverages opacity and transform modifications to execute high frame rate transitions directly on GPU threads.</p>
+              <div class="flip-tag">GPU Rendered</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flip Card 3 -->
+        <div class="flip-card-container">
+          <div class="flip-card-inner">
+            <div class="flip-card-front card-front-resp">
+              <span class="flip-icon">📱</span>
+              <h3>Responsive Design</h3>
+            </div>
+            <div class="flip-card-back">
+              <h3>Media Queries</h3>
+              <p>Fluid CSS grid templates adjust viewport layouts seamlessly from massive wide monitors down to smartphone displays.</p>
+              <div class="flip-tag">Mobile First</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flip Card 4 -->
+        <div class="flip-card-container">
+          <div class="flip-card-inner">
+            <div class="flip-card-front card-front-acc">
+              <span class="flip-icon">♿</span>
+              <h3>Accessibility</h3>
+            </div>
+            <div class="flip-card-back">
+              <h3>Screen Readers</h3>
+              <p>Enforces clear text sizes, color contrast parameters, and ARIA roles for screen reading utility devices.</p>
+              <div class="flip-tag">WCAG 2.1 AAA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Morphing Button Gallery -->
+  <section id="buttons" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Morphing Button Gallery</h2>
+        <p class="section-subtitle">Interactive button modules styled with advanced CSS effects (ripples, shines, glows) triggered on state changes.</p>
+      </div>
+
+      <div class="gallery-grid font-poppins">
+        <!-- Fill Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-fill">Fill Slide</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Fill Button</h3>
+            <p class="card-desc">An elegant slide overlay that transitions background width smoothly from left to right on hover.</p>
+          </div>
+        </div>
+
+        <!-- Ripple Style Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area overflow-hidden-container">
+            <button class="m-btn btn-ripple">Ripple Click</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Ripple Button</h3>
+            <p class="card-desc">An expanding circular pseudo-element that scales from cursor centers mimicking material waves.</p>
+          </div>
+        </div>
+
+        <!-- Gradient Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-gradient">Gradient Shift</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gradient Button</h3>
+            <p class="card-desc">Transitions linear gradient background placements to shift layout colors smoothly.</p>
+          </div>
+        </div>
+
+        <!-- Glow Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-glow">Neon Glow</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Glow Button</h3>
+            <p class="card-desc">Casts a soft drop-shadow blur overlay that grows and scales out around button borders.</p>
+          </div>
+        </div>
+
+        <!-- Slide Arrow Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-slide-arrow">
+              Continue
+              <svg class="btn-arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Slide Arrow Button</h3>
+            <p class="card-desc">Shifts internal layout spacing and translates SVG arrows outward during hover states.</p>
+          </div>
+        </div>
+
+        <!-- Neon Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-neon">CYAN NEON</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Neon Button</h3>
+            <p class="card-desc">Vibrant retro borders matching glowing text shadows to capture visual focus.</p>
+          </div>
+        </div>
+
+        <!-- Outline Fill Button Card -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <button class="m-btn btn-outline-fill">Outline Fill</button>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Outline Fill Button</h3>
+            <p class="card-desc">Draws dual path borders that expand to fill standard button volumes from corners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Text Animation Gallery -->
+  <section id="text-anims" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Text Animation Gallery</h2>
+        <p class="section-subtitle">Visual typography elements styled with CSS3 motion attributes to emphasize wording details.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Typing Effect -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-typing">
+              <span>Developer.css</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Typing Effect</h3>
+            <p class="card-desc">A typewriter simulation shifting elements steps-by-steps with blink blinks.</p>
+          </div>
+        </div>
+
+        <!-- Fade Up Text -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-fadeup">
+              <span>Fade In & Up</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Fade Up Text</h3>
+            <p class="card-desc">Continuous smooth loop lifting text elements from transparency to solid view states.</p>
+          </div>
+        </div>
+
+        <!-- Gradient Moving Text -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-gradient-move">
+              <span>VIBRANT GRADIENT</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gradient Moving Text</h3>
+            <p class="card-desc">Shifts clipping mask linear gradients along diagonal coordinate frames.</p>
+          </div>
+        </div>
+
+        <!-- Neon Glow -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-neon">
+              <span>SHINE</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Neon Glow</h3>
+            <p class="card-desc">Pulsing text-shadow rules that expand light circles outwards dynamically.</p>
+          </div>
+        </div>
+
+        <!-- Floating Letters -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-floating">
+              <span style="--i:1">F</span>
+              <span style="--i:2">L</span>
+              <span style="--i:3">O</span>
+              <span style="--i:4">A</span>
+              <span style="--i:5">T</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Floating Letters</h3>
+            <p class="card-desc">Letters oscillating vertically using CSS variables to stagger keyframe phases.</p>
+          </div>
+        </div>
+
+        <!-- Wave Letters -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-wave">
+              <span style="--i:1">W</span>
+              <span style="--i:2">A</span>
+              <span style="--i:3">V</span>
+              <span style="--i:4">E</span>
+              <span style="--i:5">S</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Wave Letters</h3>
+            <p class="card-desc">Staggered scale and bounce waves scrolling smoothly across words.</p>
+          </div>
+        </div>
+
+        <!-- Flickering Text -->
+        <div class="showcase-card">
+          <div class="preview-area">
+            <div class="text-anim-flicker">
+              <span>O<span class="flicker-off">N</span>-A<span class="flicker-fast">I</span>R</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Flickering Text</h3>
+            <p class="card-desc">Mimics broken electrical wires by cycling text opacity randomly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Animated Background Showcase -->
+  <section id="bg-showcase" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Animated Background Showcase</h2>
+        <p class="section-subtitle">Self-contained preview windows illustrating advanced CSS-only backdrop animation layers.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Floating Blobs Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-blobs">
+              <span class="mini-blob blob-a"></span>
+              <span class="mini-blob blob-b"></span>
+            </div>
+            <div class="bg-card-label">Floating Blobs</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Floating Blobs</h3>
+            <p class="card-desc">Drifting fluid shapes container-clipped to flow around margins randomly.</p>
+          </div>
+        </div>
+
+        <!-- Moving Gradient Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-moving-gradient"></div>
+            <div class="bg-card-label">Moving Gradient</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Moving Gradient</h3>
+            <p class="card-desc">Gently cycles coordinates across a vibrant color wheel spectrum.</p>
+          </div>
+        </div>
+
+        <!-- Rotating Rings Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-rotating-rings">
+              <div class="ring ring-outer"></div>
+              <div class="ring ring-inner"></div>
+            </div>
+            <div class="bg-card-label">Rotating Rings</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Rotating Rings</h3>
+            <p class="card-desc">Opposing orbit angles create optical depth for dashboards.</p>
+          </div>
+        </div>
+
+        <!-- Particle Illusion Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-particles">
+              <span style="--delay: 0s; --left: 15%"></span>
+              <span style="--delay: 1.5s; --left: 45%"></span>
+              <span style="--delay: 0.8s; --left: 70%"></span>
+              <span style="--delay: 2.2s; --left: 85%"></span>
+              <span style="--delay: 1.1s; --left: 30%"></span>
+            </div>
+            <div class="bg-card-label">Particle Illusion</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Particle Illusion</h3>
+            <p class="card-desc">Fades particles vertically using translating timelines and absolute placement offsets.</p>
+          </div>
+        </div>
+
+        <!-- Animated Grid Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-grid"></div>
+            <div class="bg-card-label">Animated Grid</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Animated Grid</h3>
+            <p class="card-desc">Translates linear-gradient background vectors to scroll perspectives.</p>
+          </div>
+        </div>
+
+        <!-- Glowing Circles Card -->
+        <div class="showcase-card no-hover-effect">
+          <div class="preview-area bg-card-preview overflow-hidden-container">
+            <div class="bg-layer bg-glowing-circles">
+              <div class="glow-circle gc-1"></div>
+              <div class="glow-circle gc-2"></div>
+            </div>
+            <div class="bg-card-label">Glowing Circles</div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Glowing Circles</h3>
+            <p class="card-desc">A deep breathing radial soft halo that pulses size dynamically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Bars Section -->
+  <section id="progress" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Animated Progress Bars</h2>
+        <p class="section-subtitle">Visual parameters representing core strengths, animating fluidly to their target widths on scroll or page load.</p>
+      </div>
+
+      <div class="progress-container">
+        <!-- Progress Item 1 -->
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>HTML5 Structural Markup</span>
+            <span class="progress-val">95%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill pb-html" style="--w: 95%"></div>
+          </div>
+        </div>
+
+        <!-- Progress Item 2 -->
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>CSS3 Keyframes & Layouts</span>
+            <span class="progress-val">90%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill pb-css" style="--w: 90%"></div>
+          </div>
+        </div>
+
+        <!-- Progress Item 3 -->
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>Tailwind CSS Utility Styling</span>
+            <span class="progress-val">85%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill pb-tailwind" style="--w: 85%"></div>
+          </div>
+        </div>
+
+        <!-- Progress Item 4 -->
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>WCAG Accessibility Standards</span>
+            <span class="progress-val">80%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill pb-access" style="--w: 80%"></div>
+          </div>
+        </div>
+
+        <!-- Progress Item 5 -->
+        <div class="progress-item">
+          <div class="progress-label">
+            <span>Responsive Viewport Systems</span>
+            <span class="progress-val">95%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill pb-resp" style="--w: 95%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">CSS Timeline</h2>
+        <p class="section-subtitle">Tracing key milestones in the evolution of CSS visual modeling and native web animations.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Card 1 -->
+        <div class="timeline-node node-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2009</span>
+            <h3>CSS Transitions</h3>
+            <p>Introduced the transition properties, enabling developers to interpolate property shifts on states like hover smoothly without JS scripts.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Card 2 -->
+        <div class="timeline-node node-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2011</span>
+            <h3>CSS Animations</h3>
+            <p>Standardized the @keyframes spec, offering complex, multi-stage, continuous cycles of animations directly on the web browser thread.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Card 3 -->
+        <div class="timeline-node node-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2012</span>
+            <h3>3D Transforms</h3>
+            <p>Added perspective properties and axis rotations, allowing web layouts to break flat planar geometries into full 3D environments.</p>
+          </div>
+        </div>
+
+        <!-- Timeline Card 4 -->
+        <div class="timeline-node node-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2015</span>
+            <h3>CSS Custom Properties</h3>
+            <p>Released CSS variables support, which allowed developers to dynamically update, inherit, and animate customized variables.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer & Contact Details -->
+  <footer id="footer" class="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Footer Column 1 -->
+        <div class="footer-col footer-brand">
+          <a href="#hero" class="footer-logo">⚡ Animations Hub</a>
+          <p class="footer-desc">
+            A premium collection of high-performance, responsive layout grids and visual motion designs built purely in CSS. Designed to inspire.
+          </p>
+        </div>
+
+        <!-- Footer Column 2 -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#loaders">Loader Gallery</a></li>
+            <li><a href="#hovers">Hover Effects</a></li>
+            <li><a href="#buttons">Morphing Buttons</a></li>
+            <li><a href="#cards">Interactive Cards</a></li>
+            <li><a href="#text-anims">Text Animations</a></li>
+            <li><a href="#bg-showcase">Background Showcase</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3 -->
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <p class="connect-text">Follow our development pages or reach out to verify custom design projects.</p>
+          <div class="social-wrapper">
+            <!-- Github -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+            </a>
+            <!-- Twitter -->
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Animations Hub. Built with pure HTML5 and Custom CSS3. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
