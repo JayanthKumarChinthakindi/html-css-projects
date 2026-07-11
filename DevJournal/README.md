@@ -67,20 +67,4 @@ The stylesheet contains custom media queries to support responsive layouts acros
 - **Tablet (768px - 991px)**: Navigation links collapse and horizontal margins tighten. The main layout transitions to a vertical flow, moving the sidebar underneath the article grids.
 - **Mobile (Up to 767px)**: All article cards, form fields, and footers stack into single-column layouts for reading clarity.
 
----
-
-## Learning Outcomes
-
-- **CSS Grid Mastery**: Implementing advanced nested grids, fractional column definitions, and template structures.
-- **Flexbox Architecture**: Positioning elements inside layout components (navigation nodes, buttons, metadata indicators).
-- **Accessibility (A11y)**: Enhancing color contrast metrics to meet WCAG AA standards, using correct heading levels, and specifying explicit `aria-label` fields.
-- **Layout Rhythm**: Establishing baseline document flow, consistent spacing, and readable line heights.
-
----
-
-## Future Improvements
-
-- **Localize Assets**: Download thumbnail placeholders and icons locally to serve in `.webp` formats for optimized assets performance.
-- **Continuous Deployment (CI/CD)**: Hook the subfolder directory to Netlify's automatic build pipelines on Git pushes.
-- **Dark Mode Switcher**: Add a CSS checkbox hack to toggle dynamic dark modes without using JavaScript.
 
