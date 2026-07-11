@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevJournal - A modern developer magazine and blog homepage covering front-end design, web development, programming, and clean code architecture.">
+  <title>DevJournal — Code, Design, and Architecture for Developers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header" id="main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="DevJournal Home">
+        Dev<span>Journal</span>
+      </a>
+
+      <!-- Navigation Navigation -->
+      <nav class="navbar" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#programming" class="nav-link">Programming</a></li>
+          <li><a href="#css" class="nav-link">CSS</a></li>
+          <li><a href="#" class="nav-link">Design</a></li>
+          <li><a href="#" class="nav-link">Resources</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <div class="search-trigger" role="button" aria-label="Open Search Bar" tabindex="0"></div>
+        <a href="#newsletter" class="btn btn-primary">Subscribe</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero / Featured Article Section -->
+    <section class="hero-section" aria-label="Featured Article">
+      <article class="featured-article">
+        <div class="featured-image-wrap">
+          <img src="https://picsum.photos/id/1/1200/800" alt="Workspace with laptop, keyboard, and coding monitor" class="featured-image" loading="lazy">
+        </div>
+        <div class="featured-content">
+          <span class="badge badge-css">CSS & Layout</span>
+          <h1 class="featured-title">
+            <a href="#">The Future of CSS: Layout Level 3, Subgrids, and Container Queries</a>
+          </h1>
+          <p class="featured-desc">
+            An in-depth guide on how CSS layouts are evolving to handle complex, dynamic constraints. Learn how to master CSS Grid Level 3, nested subgrids, and responsive container queries for modular web design.
+          </p>
+          <div class="article-meta">
+            <div class="author-wrap">
+              <img src="https://picsum.photos/id/64/100/100" alt="Sarah Connor" class="author-avatar">
+              <span class="author-name">Sarah Connor</span>
+            </div>
+            <span class="meta-dot"></span>
+            <time datetime="2026-07-11">July 11, 2026</time>
+            <span class="meta-dot"></span>
+            <span class="reading-time">12 min read</span>
+          </div>
+          <div>
+            <a href="#" class="btn btn-outline">Read Article</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Main Layout (Articles Grid + Sidebar) -->
+    <div class="main-layout">
+      <!-- Left Column: Latest Articles -->
+      <section class="latest-articles" aria-label="Latest Articles">
+        <div class="section-header">
+          <h2 class="section-title">Latest Articles</h2>
+        </div>
+
+        <div class="article-grid">
+          <!-- Card 1 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-tech card-badge">Technology</span>
+              <img src="https://picsum.photos/id/180/600/400" alt="Developer terminal running serverless deployment scripts" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Next-Gen Frontend Architectures: Going Serverless on Edge Networks</a>
+              </h3>
+              <p class="card-desc">
+                Deploying serverless frameworks at edge nodes reduces latency. Explore the core concepts of edge computing, runtime boundaries, and optimization.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Alex Rivera</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-07-10">July 10, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">8 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Next-Gen Frontend Architectures">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-programming card-badge">Programming</span>
+              <img src="https://picsum.photos/id/2/600/400" alt="Lines of TypeScript code on screen" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">TypeScript 5.8: Modern Decorators, Const Modifiers, and Performance</a>
+              </h3>
+              <p class="card-desc">
+                A thorough breakdown of new compiler flags, modern decorator support, and optimization strategies in TypeScript's latest release.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Elena Rostova</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-07-08">July 8, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">6 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read TypeScript 5.8 features">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-css card-badge">CSS</span>
+              <img src="https://picsum.photos/id/3/600/400" alt="Beautiful pastel gradient abstract background" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Modern CSS Reset: Clean Defaults for Your Next Project</a>
+              </h3>
+              <p class="card-desc">
+                Say goodbye to heavy CSS frameworks. Use a clean, modern CSS reset that establishes a solid baseline for responsive layout models.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Sarah Connor</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-07-05">July 5, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">5 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Modern CSS Reset">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-design card-badge">Design</span>
+              <img src="https://picsum.photos/id/48/600/400" alt="Designer reviewing wireframes on tablet" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Designing for Dark Mode: Advanced Color and Contrast Systems</a>
+              </h3>
+              <p class="card-desc">
+                Dark modes require more than inverted palettes. Learn the mathematics of color contrasts, semantic tokens, and dynamic theme switching.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Marcus Vance</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-07-03">July 3, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">10 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Designing for Dark Mode">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-resources card-badge">Resources</span>
+              <img src="https://picsum.photos/id/60/600/400" alt="Desk workspace with high quality books on programming" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Top 10 Tools to Optimize Web Core Vitals in Production</a>
+              </h3>
+              <p class="card-desc">
+                Improve your site performance using modern auditing tools. A compilation of utilities for profiling LCP, INP, and CLS scores.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">David Chen</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-30">June 30, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">7 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Top 10 Tools to Optimize Web Core Vitals">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-tech card-badge">Technology</span>
+              <img src="https://picsum.photos/id/96/600/400" alt="Security binary streams illustrating Web Cryptography" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Exploring the Web Cryptography API for Client-Side Hashing</a>
+              </h3>
+              <p class="card-desc">
+                Learn how to generate secure keys, hash passwords, and encrypt data inside the browser environment without downloading external scripts.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Alex Rivera</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-25">June 25, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">9 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Web Cryptography API">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-programming card-badge">Programming</span>
+              <img src="https://picsum.photos/id/119/600/400" alt="Macbook pro showing clean backend git commits history" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Clean Architecture Patterns in Monorepos and micro-frontends</a>
+              </h3>
+              <p class="card-desc">
+                Establish clean system boundaries. Learn structural patterns that prevent cross-dependency leaks and improve build times in large scale apps.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Elena Rostova</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-20">June 20, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">11 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Clean Architecture Patterns">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-css card-badge">CSS</span>
+              <img src="https://picsum.photos/id/160/600/400" alt="Close up keyboard highlighting neon letters and design accents" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">A Complete Guide to CSS Custom Properties and Theming</a>
+              </h3>
+              <p class="card-desc">
+                Level up your design systems with CSS custom properties. Handle inheritance, fallback states, and run-time mutations cleanly in vanilla CSS.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Sarah Connor</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-15">June 15, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">8 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read CSS Custom Properties Guide">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-design card-badge">Design</span>
+              <img src="https://picsum.photos/id/1025/600/400" alt="Beautiful wilderness and designer drawing elements" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Typography Rules for High-Density Technical Documentation</a>
+              </h3>
+              <p class="card-desc">
+                Learn guidelines for margins, type scale rhythm, letter height, and paragraph layouts to ensure documentation reads clearly.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Marcus Vance</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-10">June 10, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">6 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Typography Rules">Read</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Right Column: Sidebar (Widgets) -->
+      <aside class="sidebar" aria-label="Blog Sidebar">
+        <div class="sidebar-sticky-wrap">
+          <!-- Widget 1: Search -->
+          <div class="widget search-widget">
+            <h4 class="widget-title">Search Journal</h4>
+            <form class="search-form" action="#" method="GET">
+              <input type="text" placeholder="Search articles..." class="search-input" aria-label="Search articles" required>
+              <button type="submit" class="search-submit-btn" aria-label="Submit Search"></button>
+            </form>
+          </div>
+
+          <!-- Widget 2: Categories -->
+          <div class="widget categories-widget">
+            <h4 class="widget-title">Categories</h4>
+            <ul class="category-list">
+              <li class="category-item">
+                <a href="#technology">Technology <span class="category-count">12</span></a>
+              </li>
+              <li class="category-item">
+                <a href="#programming">Programming <span class="category-count">24</span></a>
+              </li>
+              <li class="category-item">
+                <a href="#css">CSS <span class="category-count">18</span></a>
+              </li>
+              <li class="category-item">
+                <a href="#">Design <span class="category-count">9</span></a>
+              </li>
+              <li class="category-item">
+                <a href="#">Resources <span class="category-count">15</span></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Widget 3: Popular Posts -->
+          <div class="widget popular-posts-widget">
+            <h4 class="widget-title">Popular Posts</h4>
+            <div class="popular-posts-list">
+              <!-- Item 1 -->
+              <article class="popular-post-item">
+                <img src="https://picsum.photos/id/119/120/120" alt="Small thumbnail coding background" class="popular-post-thumb">
+                <div class="popular-post-details">
+                  <h5 class="popular-post-title">
+                    <a href="#">Clean Architecture Patterns in Monorepos</a>
+                  </h5>
+                  <span class="popular-post-meta">June 20 &bull; 11 min read</span>
+                </div>
+              </article>
+              <!-- Item 2 -->
+              <article class="popular-post-item">
+                <img src="https://picsum.photos/id/1/120/120" alt="Small thumbnail computer setups" class="popular-post-thumb">
+                <div class="popular-post-details">
+                  <h5 class="popular-post-title">
+                    <a href="#">Future of CSS: Layout Level 3 & Container Queries</a>
+                  </h5>
+                  <span class="popular-post-meta">July 11 &bull; 12 min read</span>
+                </div>
+              </article>
+              <!-- Item 3 -->
+              <article class="popular-post-item">
+                <img src="https://picsum.photos/id/48/120/120" alt="Small thumbnail dark interface designer work" class="popular-post-thumb">
+                <div class="popular-post-details">
+                  <h5 class="popular-post-title">
+                    <a href="#">Designing for Dark Mode: Contrast Systems</a>
+                  </h5>
+                  <span class="popular-post-meta">July 3 &bull; 10 min read</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Widget 4: Newsletter Sign-up -->
+          <div class="widget newsletter-widget">
+            <h4 class="widget-title">DevJournal Newsletter</h4>
+            <p class="text-sm">Get articles delivered directly. No spam, unsubscribe anytime.</p>
+            <form class="widget-newsletter-form" action="#" method="POST">
+              <input type="email" placeholder="you@example.com" class="widget-newsletter-input" aria-label="Email address for sidebar newsletter" required>
+              <button type="submit" class="btn btn-primary btn-full">Subscribe Now</button>
+            </form>
+          </div>
+
+          <!-- Widget 5: Tag Cloud -->
+          <div class="widget tags-widget">
+            <h4 class="widget-title">Tags</h4>
+            <div class="tag-cloud">
+              <a href="#" class="tag-item">JavaScript</a>
+              <a href="#" class="tag-item">CSS Grid</a>
+              <a href="#" class="tag-item">TypeScript</a>
+              <a href="#" class="tag-item">Accessibility</a>
+              <a href="#" class="tag-item">Design Systems</a>
+              <a href="#" class="tag-item">React</a>
+              <a href="#" class="tag-item">Monorepos</a>
+              <a href="#" class="tag-item">Performance</a>
+              <a href="#" class="tag-item">Git</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Category Sections -->
+    <div class="category-sections-wrapper">
+      
+      <!-- Section 1: Technology -->
+      <section id="technology" aria-label="Technology Articles">
+        <div class="section-header">
+          <h2 class="section-title">Technology</h2>
+          <a href="#" class="btn-link text-sm">View All Tech</a>
+        </div>
+        <div class="category-grid-three">
+          <!-- Card 1 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-tech card-badge">Technology</span>
+              <img src="https://picsum.photos/id/1012/600/400" alt="Server clusters inside high scale datacenters" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">The State of Serverless Databases in 2026</a>
+              </h3>
+              <p class="card-desc">
+                Analyzing the capabilities, cold-start latency, and transactional consistency models of modern cloud data services.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Alex Rivera</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-28">June 28, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">9 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read State of Serverless Databases">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-tech card-badge">Technology</span>
+              <img src="https://picsum.photos/id/338/600/400" alt="Hardware processors and AI core layout blueprints" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">WebAssembly (Wasm) Beyond the Browser Boundaries</a>
+              </h3>
+              <p class="card-desc">
+                Wasm is escaping sandbox limits. A deep dive into WASI (WebAssembly System Interface) and server-side runtimes.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">David Chen</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-24">June 24, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">10 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Wasm Beyond Browser">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-tech card-badge">Technology</span>
+              <img src="https://picsum.photos/id/447/600/400" alt="Abstract connection points explaining distributed nodes" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Isomorphic Javascript: SSR and Hydration Optimization</a>
+              </h3>
+              <p class="card-desc">
+                Analyzing hydration mismatch pitfalls, lazy partial hydration, and structural performance solutions for heavy clients.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Alex Rivera</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-18">June 18, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">8 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Isomorphic Javascript">Read</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 2: Programming -->
+      <section id="programming" aria-label="Programming Articles">
+        <div class="section-header">
+          <h2 class="section-title">Programming</h2>
+          <a href="#" class="btn-link text-sm">View All Programming</a>
+        </div>
+        <div class="category-grid-three">
+          <!-- Card 1 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-programming card-badge">Programming</span>
+              <img src="https://picsum.photos/id/91/600/400" alt="Neatly formatted object oriented source code on display screen" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Domain-Driven Design (DDD) in Clean Node.js Architectures</a>
+              </h3>
+              <p class="card-desc">
+                Translate domain concepts into clean code layouts. Build modular aggregates, repositories, and domain services.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Elena Rostova</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-12">June 12, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">12 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Domain-Driven Design in Node.js">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-programming card-badge">Programming</span>
+              <img src="https://picsum.photos/id/160/600/400" alt="Debugging window displaying runtime tracing outputs" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Functional Programming Paradigms in Modern TypeScript</a>
+              </h3>
+              <p class="card-desc">
+                Unlocking pure functions, composition, algebraic structures, and lens mechanics in production-level TypeScript systems.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Elena Rostova</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-05">June 5, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">10 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Functional Programming typescript">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-programming card-badge">Programming</span>
+              <img src="https://picsum.photos/id/180/600/400" alt="Code structure blueprint and workflow diagram" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Testing Strategies for Micro-Services and Event-Driven Pipelines</a>
+              </h3>
+              <p class="card-desc">
+                Integration testing without flakiness. Set up mock brokers, container networks, and deterministic async tests.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">David Chen</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-06-01">June 1, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">9 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Microservices Testing Strategies">Read</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 3: CSS -->
+      <section id="css" aria-label="CSS Articles">
+        <div class="section-header">
+          <h2 class="section-title">CSS</h2>
+          <a href="#" class="btn-link text-sm">View All CSS</a>
+        </div>
+        <div class="category-grid-three">
+          <!-- Card 1 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-css card-badge">CSS</span>
+              <img src="https://picsum.photos/id/3/600/400" alt="Colorful layout grid blocks abstract representation" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Mastering CSS subgrids for nested card alignment</a>
+              </h3>
+              <p class="card-desc">
+                Keep cards aligned across columns and rows. Discover the clean, subgrid alignment properties and fallbacks.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Sarah Connor</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-05-25">May 25, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">6 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Mastering CSS Subgrids">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-css card-badge">CSS</span>
+              <img src="https://picsum.photos/id/160/600/400" alt="Neon glowing keyboard lines representing modern CSS animations" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">Scroll-Driven CSS Animations: Scroll timelines and view timelines</a>
+              </h3>
+              <p class="card-desc">
+                Implement parallax scrolls, scroll indicators, and fading headers using standard, pure CSS APIs without any JS listeners.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Sarah Connor</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-05-20">May 20, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">8 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read Scroll Driven CSS Animations">Read</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <div class="card-image-wrap">
+              <span class="badge badge-css card-badge">CSS</span>
+              <img src="https://picsum.photos/id/48/600/400" alt="Palette contrasts screen illustrating accessibility color contrasts" class="card-image" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">
+                <a href="#">The Complete CSS logical properties checklist</a>
+              </h3>
+              <p class="card-desc">
+                Ensure perfect multi-directional, localized layout conversions using margin-inline, padding-block, and structural inline rules.
+              </p>
+              <div class="card-footer">
+                <div class="card-meta-compact">
+                  <div class="card-meta-line">
+                    <span class="author-name">Sarah Connor</span>
+                  </div>
+                  <div class="card-meta-line">
+                    <time datetime="2026-05-15">May 15, 2026</time>
+                    <span class="meta-dot"></span>
+                    <span class="reading-time">7 min read</span>
+                  </div>
+                </div>
+                <a href="#" class="btn-link" aria-label="Read CSS Logical Properties Checklist">Read</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Newsletter CTA Banner Section -->
+    <section class="newsletter-banner" id="newsletter">
+      <div class="newsletter-container">
+        <h2 class="newsletter-heading">Get weekly developer insights</h2>
+        <p class="newsletter-desc">
+          Join 50,000+ engineers receiving deep dives on frontend design systems, clean code architectures, CSS grid mastery, and development trends.
+        </p>
+        <form class="newsletter-form" action="#" method="POST">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" aria-label="Email address for weekly newsletter" required>
+          <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Logo & Bio -->
+        <div class="footer-col">
+          <a href="#" class="logo footer-logo" aria-label="DevJournal Home">
+            Dev<span>Journal</span>
+          </a>
+          <p>
+            An independent publication dedicated to high-quality technical insights, web standards, programming patterns, and clean frontend engineering.
+          </p>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Write for Us</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Developer API</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#css">CSS & Layout</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Social Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Social Links</h4>
+          <p>Follow us for daily coding tips, design updates, and technical articles.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Twitter X">𝕏</a>
+            <a href="#" class="social-link" aria-label="GitHub">Git</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">In</a>
+            <a href="#" class="social-link" aria-label="RSS Feed">RSS</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 DevJournal. Built for advanced learning. All rights reserved.</p>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+          <a href="#">Accessibility Statement</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
