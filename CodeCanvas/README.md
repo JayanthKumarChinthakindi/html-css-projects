@@ -48,16 +48,6 @@ The primary purpose of CodeCanvas is to demonstrate state-of-the-art vanilla sty
 
 ---
 
-## 🛠️ Built With
-
-| Technology | Purpose | Core Standard |
-| :--- | :--- | :--- |
-| **HTML5** | Content Organization & Semantics | Living Standard |
-| **CSS3** | Layouts, Animations, Variables & Responsiveness | W3C Recommendation |
-| **SVG** | Vector Diagrams, Branding & Custom Icons | W3C Recommendation |
-
----
-
 ## 📂 Folder Structure
 
 ```text
