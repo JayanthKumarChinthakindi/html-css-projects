@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PulseBoard - Premium SaaS Admin Dashboard and Analytics Panel">
+    <title>PulseBoard | Premium SaaS Admin Dashboard</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Remix Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Checkbox Hack for Mobile Sidebar Toggle -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+    <label for="sidebar-toggle" class="sidebar-overlay" id="sidebar-overlay-label"></label>
+
+    <!-- Sidebar Wrapper -->
+    <aside class="sidebar" id="app-sidebar">
+        <!-- Sidebar Brand/Logo -->
+        <div class="sidebar-brand">
+            <div class="logo-icon">
+                <i class="ri-pulse-fill"></i>
+            </div>
+            <span class="logo-text">Pulse<span>Board</span></span>
+        </div>
+
+        <!-- Sidebar Navigation Menu -->
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="#dashboard" class="nav-link active" id="nav-dashboard">
+                        <i class="ri-dashboard-3-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#analytics" class="nav-link" id="nav-analytics">
+                        <i class="ri-bar-chart-box-line"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#orders" class="nav-link" id="nav-orders">
+                        <i class="ri-shopping-cart-2-line"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#customers" class="nav-link" id="nav-customers">
+                        <i class="ri-group-line"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#products" class="nav-link" id="nav-products">
+                        <i class="ri-box-3-line"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#reports" class="nav-link" id="nav-reports">
+                        <i class="ri-file-chart-line"></i>
+                        <span>Reports</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#calendar" class="nav-link" id="nav-calendar">
+                        <i class="ri-calendar-line"></i>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#messages" class="nav-link" id="nav-messages">
+                        <i class="ri-mail-line"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link" id="nav-settings">
+                        <i class="ri-settings-4-line"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#help" class="nav-link" id="nav-help">
+                        <i class="ri-question-line"></i>
+                        <span>Help Center</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Sidebar Footer (Logout) -->
+        <div class="sidebar-footer">
+            <a href="#logout" class="nav-link logout-link" id="nav-logout">
+                <i class="ri-logout-box-r-line"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Sticky Header -->
+        <header class="header" id="app-header">
+            <!-- Header Left: Sidebar Trigger & Breadcrumb -->
+            <div class="header-left">
+                <label for="sidebar-toggle" class="menu-toggle-btn" id="menu-toggle-btn-label">
+                    <i class="ri-menu-2-line"></i>
+                </label>
+                <div class="breadcrumb">
+                    <span class="breadcrumb-parent">PulseBoard</span>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <span class="breadcrumb-active">Dashboard</span>
+                </div>
+            </div>
+
+            <!-- Header Middle: Search Bar -->
+            <div class="header-search">
+                <div class="search-wrapper">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search analytics, customers, settings..." id="header-search-input">
+                </div>
+            </div>
+
+            <!-- Header Right: Quick Icons & User Profile -->
+            <div class="header-right">
+                <!-- Messages Icon -->
+                <div class="header-action-btn" id="header-msg-btn">
+                    <i class="ri-chat-3-line"></i>
+                    <span class="badge badge-accent"></span>
+                </div>
+                <!-- Notifications Icon -->
+                <div class="header-action-btn" id="header-notif-btn">
+                    <i class="ri-notification-3-line"></i>
+                    <span class="badge badge-success"></span>
+                </div>
+                
+                <div class="divider"></div>
+
+                <!-- User Profile -->
+                <div class="user-profile" id="user-profile-menu">
+                    <div class="avatar-container">
+                        <img src="assets/dashboard_avatar.png" alt="Alex Morgan Avatar" class="user-avatar" id="user-profile-avatar-img">
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Alex Morgan</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                    <i class="ri-arrow-down-s-line profile-arrow"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Wrapper -->
+        <main class="content-wrapper">
+            
+            <!-- 1. Welcome Banner Widget -->
+            <section class="welcome-banner" id="dashboard-welcome-banner">
+                <!-- Floating Decorative Background Shapes -->
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+
+                <div class="welcome-content">
+                    <span class="welcome-badge"><i class="ri-sparkling-fill"></i> Performance Update</span>
+                    <h1 class="welcome-title">Welcome back, Alex Morgan!</h1>
+                    <p class="welcome-subtitle">
+                        Your enterprise system statistics are looking positive today. Analytics records an average of <strong>18.5% user conversion growth</strong>. Make sure to review the pending orders and storage allocation metrics.
+                    </p>
+                    <a href="#analytics" class="btn btn-primary" id="welcome-banner-cta">
+                        <span>View Live Performance</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2. Six Statistics Cards Section -->
+            <section class="stats-grid" id="dashboard-stats-grid">
+                
+                <!-- Stat Card 1 -->
+                <div class="stat-card" id="stat-revenue">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper revenue">
+                            <i class="ri-wallet-3-line"></i>
+                        </div>
+                        <span class="trend trend-up">
+                            <i class="ri-arrow-up-line"></i> 12.4%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Total Revenue</span>
+                        <h2 class="stat-value">$142,384.50</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs $126,678 last month</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 2 -->
+                <div class="stat-card" id="stat-users">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper users">
+                            <i class="ri-group-line"></i>
+                        </div>
+                        <span class="trend trend-up">
+                            <i class="ri-arrow-up-line"></i> 8.3%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Total Users</span>
+                        <h2 class="stat-value">24,892</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs 22,984 last month</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 3 -->
+                <div class="stat-card" id="stat-orders">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper orders">
+                            <i class="ri-shopping-cart-2-line"></i>
+                        </div>
+                        <span class="trend trend-down">
+                            <i class="ri-arrow-down-line"></i> 2.1%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Orders</span>
+                        <h2 class="stat-value">1,204</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs 1,230 last week</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 4 -->
+                <div class="stat-card" id="stat-profit">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper profit">
+                            <i class="ri-money-dollar-circle-line"></i>
+                        </div>
+                        <span class="trend trend-up">
+                            <i class="ri-arrow-up-line"></i> 15.8%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Net Profit</span>
+                        <h2 class="stat-value">$48,290.00</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs $41,700 last month</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 5 -->
+                <div class="stat-card" id="stat-visitors">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper visitors">
+                            <i class="ri-eye-line"></i>
+                        </div>
+                        <span class="trend trend-up">
+                            <i class="ri-arrow-up-line"></i> 24.1%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Visitors</span>
+                        <h2 class="stat-value">158,400</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs 127,600 last week</span>
+                    </div>
+                </div>
+
+                <!-- Stat Card 6 -->
+                <div class="stat-card" id="stat-conversion">
+                    <div class="stat-header">
+                        <div class="stat-icon-wrapper conversion">
+                            <i class="ri-percent-line"></i>
+                        </div>
+                        <span class="trend trend-up">
+                            <i class="ri-arrow-up-line"></i> 0.4%
+                        </span>
+                    </div>
+                    <div class="stat-body">
+                        <span class="stat-title">Conversion Rate</span>
+                        <h2 class="stat-value">3.42%</h2>
+                    </div>
+                    <div class="stat-footer">
+                        <span class="stat-subtitle">vs 3.02% last month</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Primary Dashboard Grid: Analytics Chart & Revenue Breakdown -->
+            <section class="dashboard-primary-grid" id="analytics-section">
+                
+                <!-- Analytics Widget -->
+                <div class="card chart-card" id="analytics-widget">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Activity & Revenue Analytics</h3>
+                            <p class="card-subtitle">Detailed overview of monthly income streams vs expenses</p>
+                        </div>
+                        <div class="card-actions">
+                            <div class="chart-legend">
+                                <span class="legend-item"><span class="legend-color revenue-color"></span>Revenue</span>
+                                <span class="legend-item"><span class="legend-color expense-color"></span>Expenses</span>
+                            </div>
+                            <div class="custom-select-wrapper">
+                                <span class="select-value">Year 2026 <i class="ri-arrow-down-s-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-summary-pills">
+                        <div class="summary-pill">
+                            <span class="pill-label">Average Revenue</span>
+                            <span class="pill-value">$18,450 / mo</span>
+                        </div>
+                        <div class="summary-pill">
+                            <span class="pill-label">Average Expenses</span>
+                            <span class="pill-value">$11,200 / mo</span>
+                        </div>
+                        <div class="summary-pill">
+                            <span class="pill-label">Net Growth</span>
+                            <span class="pill-value text-success">+24.3% YoY</span>
+                        </div>
+                    </div>
+
+                    <!-- CSS-Only Interactive Chart Grid -->
+                    <div class="chart-container">
+                        <!-- Chart Y-Axis Labels & Grid Lines background -->
+                        <div class="chart-y-axis">
+                            <span class="y-label">$25k</span>
+                            <span class="y-label">$20k</span>
+                            <span class="y-label">$15k</span>
+                            <span class="y-label">$10k</span>
+                            <span class="y-label">$5k</span>
+                            <span class="y-label">$0</span>
+                        </div>
+                        
+                        <!-- Chart Grid Panel -->
+                        <div class="chart-grid">
+                            <!-- Background Grid Lines -->
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+
+                            <!-- Interactive Column Bars -->
+                            <div class="bars-container">
+                                
+                                <!-- Jan -->
+                                <div class="month-column" style="--jan-revenue: 45%; --jan-expenses: 30%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--jan-revenue)">
+                                            <span class="tooltip">Revenue: $11.2k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--jan-expenses)">
+                                            <span class="tooltip">Expenses: $7.5k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Jan</span>
+                                </div>
+
+                                <!-- Feb -->
+                                <div class="month-column" style="--feb-revenue: 60%; --feb-expenses: 40%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--feb-revenue)">
+                                            <span class="tooltip">Revenue: $15.0k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--feb-expenses)">
+                                            <span class="tooltip">Expenses: $10.0k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Feb</span>
+                                </div>
+
+                                <!-- Mar -->
+                                <div class="month-column" style="--mar-revenue: 55%; --mar-expenses: 45%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--mar-revenue)">
+                                            <span class="tooltip">Revenue: $13.7k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--mar-expenses)">
+                                            <span class="tooltip">Expenses: $11.2k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Mar</span>
+                                </div>
+
+                                <!-- Apr -->
+                                <div class="month-column" style="--apr-revenue: 75%; --apr-expenses: 50%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--apr-revenue)">
+                                            <span class="tooltip">Revenue: $18.7k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--apr-expenses)">
+                                            <span class="tooltip">Expenses: $12.5k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Apr</span>
+                                </div>
+
+                                <!-- May -->
+                                <div class="month-column" style="--may-revenue: 80%; --may-expenses: 55%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--may-revenue)">
+                                            <span class="tooltip">Revenue: $20.0k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--may-expenses)">
+                                            <span class="tooltip">Expenses: $13.7k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">May</span>
+                                </div>
+
+                                <!-- Jun -->
+                                <div class="month-column" style="--jun-revenue: 95%; --jun-expenses: 65%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--jun-revenue)">
+                                            <span class="tooltip">Revenue: $23.7k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--jun-expenses)">
+                                            <span class="tooltip">Expenses: $16.2k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Jun</span>
+                                </div>
+
+                                <!-- Jul -->
+                                <div class="month-column" style="--jul-revenue: 90%; --jul-expenses: 60%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--jul-revenue)">
+                                            <span class="tooltip">Revenue: $22.5k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--jul-expenses)">
+                                            <span class="tooltip">Expenses: $15.0k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Jul</span>
+                                </div>
+
+                                <!-- Aug -->
+                                <div class="month-column" style="--aug-revenue: 70%; --aug-expenses: 45%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--aug-revenue)">
+                                            <span class="tooltip">Revenue: $17.5k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--aug-expenses)">
+                                            <span class="tooltip">Expenses: $11.2k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Aug</span>
+                                </div>
+
+                                <!-- Sep -->
+                                <div class="month-column" style="--sep-revenue: 85%; --sep-expenses: 50%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--sep-revenue)">
+                                            <span class="tooltip">Revenue: $21.2k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--sep-expenses)">
+                                            <span class="tooltip">Expenses: $12.5k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Sep</span>
+                                </div>
+
+                                <!-- Oct -->
+                                <div class="month-column" style="--oct-revenue: 75%; --oct-expenses: 55%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--oct-revenue)">
+                                            <span class="tooltip">Revenue: $18.7k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--oct-expenses)">
+                                            <span class="tooltip">Expenses: $13.7k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Oct</span>
+                                </div>
+
+                                <!-- Nov -->
+                                <div class="month-column" style="--nov-revenue: 88%; --nov-expenses: 60%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--nov-revenue)">
+                                            <span class="tooltip">Revenue: $22.0k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--nov-expenses)">
+                                            <span class="tooltip">Expenses: $15.0k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Nov</span>
+                                </div>
+
+                                <!-- Dec -->
+                                <div class="month-column" style="--dec-revenue: 98%; --dec-expenses: 68%;">
+                                    <div class="double-bars">
+                                        <div class="bar bar-revenue animate-bar" style="height: var(--dec-revenue)">
+                                            <span class="tooltip">Revenue: $24.5k</span>
+                                        </div>
+                                        <div class="bar bar-expenses animate-bar" style="height: var(--dec-expenses)">
+                                            <span class="tooltip">Expenses: $17.0k</span>
+                                        </div>
+                                    </div>
+                                    <span class="x-label">Dec</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Revenue Breakdown Widget -->
+                <div class="card breakdown-card" id="revenue-breakdown-widget">
+                    <div class="card-header">
+                        <h3 class="card-title">Revenue Breakdown</h3>
+                        <p class="card-subtitle">Percentage performance across models</p>
+                    </div>
+
+                    <div class="breakdown-list">
+                        
+                        <!-- Item 1: Products -->
+                        <div class="breakdown-item">
+                            <div class="breakdown-info">
+                                <span class="breakdown-label"><i class="ri-shopping-bag-3-fill"></i> Products</span>
+                                <span class="breakdown-value">$45,200 <span class="breakdown-percentage">(65%)</span></span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill products-fill" style="--fill-width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Services -->
+                        <div class="breakdown-item">
+                            <div class="breakdown-info">
+                                <span class="breakdown-label"><i class="ri-customer-service-2-fill"></i> Services</span>
+                                <span class="breakdown-value">$21,400 <span class="breakdown-percentage">(45%)</span></span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill services-fill" style="--fill-width: 45%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Subscriptions -->
+                        <div class="breakdown-item">
+                            <div class="breakdown-info">
+                                <span class="breakdown-label"><i class="ri-calendar-event-fill"></i> Subscriptions</span>
+                                <span class="breakdown-value">$58,100 <span class="breakdown-percentage">(80%)</span></span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill subscription-fill" style="--fill-width: 80%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Marketing -->
+                        <div class="breakdown-item">
+                            <div class="breakdown-info">
+                                <span class="breakdown-label"><i class="ri-advertisement-fill"></i> Marketing</span>
+                                <span class="breakdown-value">$3,750 <span class="breakdown-percentage">(15%)</span></span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill marketing-fill" style="--fill-width: 15%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- CSS-only breakdown key stats footer card -->
+                    <div class="breakdown-footer-alert">
+                        <div class="alert-icon">
+                            <i class="ri-information-line"></i>
+                        </div>
+                        <div class="alert-text">
+                            Subscriptions are driving <strong>54% of overall profit</strong>, experiencing a +4% lift over last week.
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 4. Secondary Dashboard Grid: Recent Orders & Calendar -->
+            <section class="dashboard-secondary-grid" id="orders-calendar-section">
+                
+                <!-- Recent Orders Widget -->
+                <div class="card orders-card" id="recent-orders-widget">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Recent Orders</h3>
+                            <p class="card-subtitle">Real-time status updates of latest customer transactions</p>
+                        </div>
+                        <a href="#orders" class="btn btn-outline" id="view-all-orders-btn">View All Orders</a>
+                    </div>
+
+                    <!-- Responsive Table Wrapper -->
+                    <div class="table-responsive-wrapper">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th class="text-right">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="font-medium text-primary">#ORD-84920</td>
+                                    <td>
+                                        <div class="table-customer">
+                                            <span class="customer-avatar avatar-sc">SC</span>
+                                            <span class="customer-name">Sarah Connor</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary">SaaS Pro Plan</td>
+                                    <td>
+                                        <span class="status-badge status-completed">Completed</span>
+                                    </td>
+                                    <td class="text-secondary">July 12, 2026</td>
+                                    <td class="text-right font-medium text-primary">$299.00</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="font-medium text-primary">#ORD-84919</td>
+                                    <td>
+                                        <div class="table-customer">
+                                            <span class="customer-avatar avatar-js">JS</span>
+                                            <span class="customer-name">James Smith</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary">Enterprise License</td>
+                                    <td>
+                                        <span class="status-badge status-processing">Processing</span>
+                                    </td>
+                                    <td class="text-secondary">July 11, 2026</td>
+                                    <td class="text-right font-medium text-primary">$1,499.00</td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="font-medium text-primary">#ORD-84918</td>
+                                    <td>
+                                        <div class="table-customer">
+                                            <span class="customer-avatar avatar-er">ER</span>
+                                            <span class="customer-name">Elena Rostova</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary">Standard Plan Tier 2</td>
+                                    <td>
+                                        <span class="status-badge status-pending">Pending</span>
+                                    </td>
+                                    <td class="text-secondary">July 10, 2026</td>
+                                    <td class="text-right font-medium text-primary">$129.00</td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="font-medium text-primary">#ORD-84917</td>
+                                    <td>
+                                        <div class="table-customer">
+                                            <span class="customer-avatar avatar-ma">MA</span>
+                                            <span class="customer-name">Marcus Aurelius</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary">Consulting Add-on</td>
+                                    <td>
+                                        <span class="status-badge status-cancelled">Cancelled</span>
+                                    </td>
+                                    <td class="text-secondary">July 09, 2026</td>
+                                    <td class="text-right font-medium text-primary">$499.00</td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="font-medium text-primary">#ORD-84916</td>
+                                    <td>
+                                        <div class="table-customer">
+                                            <span class="customer-avatar avatar-dp">DP</span>
+                                            <span class="customer-name">Diana Prince</span>
+                                        </div>
+                                    </td>
+                                    <td class="text-secondary">SaaS Pro Plan</td>
+                                    <td>
+                                        <span class="status-badge status-completed">Completed</span>
+                                    </td>
+                                    <td class="text-secondary">July 09, 2026</td>
+                                    <td class="text-right font-medium text-primary">$299.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Calendar Widget -->
+                <div class="card calendar-card" id="calendar-widget">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Events & Calendar</h3>
+                            <p class="card-subtitle">July 2026 Scheduler</p>
+                        </div>
+                        <div class="calendar-arrows">
+                            <span class="arrow-btn"><i class="ri-arrow-left-s-line"></i></span>
+                            <span class="arrow-btn"><i class="ri-arrow-right-s-line"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Calendar Body -->
+                    <div class="calendar-body">
+                        <!-- Days of the week header -->
+                        <div class="calendar-weekdays">
+                            <span>Mo</span>
+                            <span>Tu</span>
+                            <span>We</span>
+                            <span>Th</span>
+                            <span>Fr</span>
+                            <span>Sa</span>
+                            <span>Su</span>
+                        </div>
+
+                        <!-- Days grid -->
+                        <div class="calendar-days">
+                            <!-- Prev Month Offset (June) -->
+                            <span class="day offset">29</span>
+                            <span class="day offset">30</span>
+                            
+                            <!-- Current Month Days -->
+                            <span class="day">1</span>
+                            <span class="day">2</span>
+                            <span class="day">3</span>
+                            <span class="day weekend">4</span>
+                            <span class="day weekend">5</span>
+                            
+                            <span class="day">6</span>
+                            <span class="day">7</span>
+                            <!-- Event Day: Product Launch -->
+                            <span class="day event-day" data-tooltip="July 08: Product Launch V2.4">
+                                8
+                                <span class="event-dot dot-primary"></span>
+                            </span>
+                            <span class="day">9</span>
+                            <span class="day">10</span>
+                            <span class="day weekend">11</span>
+                            <!-- Current Active Day (Sunday) -->
+                            <span class="day today weekend" data-tooltip="Today (July 12)">12</span>
+                            
+                            <span class="day">13</span>
+                            <span class="day">14</span>
+                            <!-- Event Day: Team Standup -->
+                            <span class="day event-day" data-tooltip="July 15: Q3 Team Sync">
+                                15
+                                <span class="event-dot dot-warning"></span>
+                            </span>
+                            <span class="day">16</span>
+                            <span class="day">17</span>
+                            <span class="day weekend">18</span>
+                            <span class="day weekend">19</span>
+                            
+                            <span class="day">20</span>
+                            <span class="day">21</span>
+                            <span class="day">22</span>
+                            <!-- Event Day: Client Review -->
+                            <span class="day event-day" data-tooltip="July 23: Client Review Call">
+                                23
+                                <span class="event-dot dot-danger"></span>
+                            </span>
+                            <span class="day">24</span>
+                            <span class="day weekend">25</span>
+                            <span class="day weekend">26</span>
+                            
+                            <span class="day">27</span>
+                            <span class="day">28</span>
+                            <span class="day">29</span>
+                            <span class="day">30</span>
+                            <span class="day">31</span>
+
+                            <!-- Next Month Offset (August) -->
+                            <span class="day offset weekend">1</span>
+                            <span class="day offset weekend">2</span>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events Brief -->
+                    <div class="calendar-events-list">
+                        <div class="upcoming-event-item">
+                            <span class="event-tag badge-completed">08 JUL</span>
+                            <div class="event-details">
+                                <span class="event-name">Product Launch V2.4</span>
+                                <span class="event-time">09:00 AM • Completed</span>
+                            </div>
+                        </div>
+                        <div class="upcoming-event-item">
+                            <span class="event-tag badge-processing">15 JUL</span>
+                            <div class="event-details">
+                                <span class="event-name">Q3 Strategy Team Sync</span>
+                                <span class="event-time">02:00 PM • Remote Google Meet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 5. Tertiary Dashboard Grid: Team, Activity, Notifications, Storage -->
+            <section class="dashboard-tertiary-grid" id="tertiary-sections">
+                
+                <!-- Widget 1: Team Members -->
+                <div class="card team-card" id="team-members-widget">
+                    <div class="card-header">
+                        <h3 class="card-title">Team Members</h3>
+                        <p class="card-subtitle">Active project collaborators</p>
+                    </div>
+
+                    <div class="team-list">
+                        <!-- Member 1 -->
+                        <div class="team-member-item">
+                            <div class="member-profile">
+                                <div class="avatar-container">
+                                    <span class="member-avatar gradient-avatar-1">EW</span>
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="member-details">
+                                    <span class="member-name">Emma Watson</span>
+                                    <span class="member-position">Product Manager</span>
+                                </div>
+                            </div>
+                            <div class="member-action">
+                                <span class="action-btn-sm" id="msg-emma"><i class="ri-message-3-line"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Member 2 -->
+                        <div class="team-member-item">
+                            <div class="member-profile">
+                                <div class="avatar-container">
+                                    <span class="member-avatar gradient-avatar-2">LN</span>
+                                    <span class="status-indicator online"></span>
+                                </div>
+                                <div class="member-details">
+                                    <span class="member-name">Liam Neeson</span>
+                                    <span class="member-position">Lead Developer</span>
+                                </div>
+                            </div>
+                            <div class="member-action">
+                                <span class="action-btn-sm" id="msg-liam"><i class="ri-message-3-line"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Member 3 -->
+                        <div class="team-member-item">
+                            <div class="member-profile">
+                                <div class="avatar-container">
+                                    <span class="member-avatar gradient-avatar-3">SL</span>
+                                    <span class="status-indicator busy"></span>
+                                </div>
+                                <div class="member-details">
+                                    <span class="member-name">Sophia Loren</span>
+                                    <span class="member-position">UI Designer</span>
+                                </div>
+                            </div>
+                            <div class="member-action">
+                                <span class="action-btn-sm" id="msg-sophia"><i class="ri-message-3-line"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- Member 4 -->
+                        <div class="team-member-item">
+                            <div class="member-profile">
+                                <div class="avatar-container">
+                                    <span class="member-avatar gradient-avatar-4">DB</span>
+                                    <span class="status-indicator offline"></span>
+                                </div>
+                                <div class="member-details">
+                                    <span class="member-name">David Beckham</span>
+                                    <span class="member-position">Marketer</span>
+                                </div>
+                            </div>
+                            <div class="member-action">
+                                <span class="action-btn-sm" id="msg-david"><i class="ri-message-3-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 2: Recent Activity Timeline -->
+                <div class="card activity-card" id="recent-activity-widget">
+                    <div class="card-header">
+                        <h3 class="card-title">Recent Activity</h3>
+                        <p class="card-subtitle">Real-time system events</p>
+                    </div>
+
+                    <div class="timeline-container">
+                        <!-- Activity 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge badge-primary">
+                                <i class="ri-shopping-cart-line"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-desc">New order received from <strong>Sarah Connor</strong> for SaaS Pro Plan.</p>
+                                <span class="timeline-time">5 mins ago</span>
+                            </div>
+                        </div>
+
+                        <!-- Activity 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge badge-success">
+                                <i class="ri-user-add-line"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-desc">Customer registered: <strong>Elena Rostova</strong> created an administrator profile.</p>
+                                <span class="timeline-time">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <!-- Activity 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge badge-accent">
+                                <i class="ri-money-dollar-circle-line"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-desc">Invoice #INV-2940 of $1,499.00 was paid by <strong>James Smith</strong>.</p>
+                                <span class="timeline-time">4 hours ago</span>
+                            </div>
+                        </div>
+
+                        <!-- Activity 4 -->
+                        <div class="timeline-item">
+                            <div class="timeline-badge badge-warning">
+                                <i class="ri-file-chart-line"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-desc">Monthly financial analytics report was compiled and exported.</p>
+                                <span class="timeline-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 3: Notifications Panel -->
+                <div class="card notifications-card" id="notifications-widget">
+                    <div class="card-header">
+                        <h3 class="card-title">System Alerts</h3>
+                        <p class="card-subtitle">Key updates requiring review</p>
+                    </div>
+
+                    <div class="notifications-list">
+                        <!-- Notification 1 -->
+                        <div class="notification-item">
+                            <div class="notif-icon-wrapper danger-bg">
+                                <i class="ri-shield-keyhole-line text-danger"></i>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-header-info">
+                                    <span class="notif-title">Security Alert</span>
+                                    <span class="notif-time">10m ago</span>
+                                </div>
+                                <p class="notif-desc">Unrecognized login attempt detected from IP 192.168.1.100.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification 2 -->
+                        <div class="notification-item">
+                            <div class="notif-icon-wrapper success-bg">
+                                <i class="ri-refresh-line text-success"></i>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-header-info">
+                                    <span class="notif-title">System Update</span>
+                                    <span class="notif-time">1h ago</span>
+                                </div>
+                                <p class="notif-desc">Version 2.4.1-Stable has been deployed successfully to production.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification 3 -->
+                        <div class="notification-item">
+                            <div class="notif-icon-wrapper success-bg">
+                                <i class="ri-money-dollar-box-line text-success"></i>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-header-info">
+                                    <span class="notif-title">Payment Received</span>
+                                    <span class="notif-time">3h ago</span>
+                                </div>
+                                <p class="notif-desc">Successfully processed deposit of $1,499.00 from client.</p>
+                            </div>
+                        </div>
+
+                        <!-- Notification 4 -->
+                        <div class="notification-item">
+                            <div class="notif-icon-wrapper accent-bg">
+                                <i class="ri-chat-3-line text-accent"></i>
+                            </div>
+                            <div class="notif-body">
+                                <div class="notif-header-info">
+                                    <span class="notif-title">New Message</span>
+                                    <span class="notif-time">5h ago</span>
+                                </div>
+                                <p class="notif-desc">Emma Watson added a comment to your shared design workspace.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget 4: Storage Usage -->
+                <div class="card storage-card" id="storage-usage-widget">
+                    <div class="card-header">
+                        <h3 class="card-title">Storage Allocation</h3>
+                        <p class="card-subtitle">Cloud disk usage metrics</p>
+                    </div>
+
+                    <div class="storage-body">
+                        <!-- CSS Circular Progress Conic-Gradient Chart -->
+                        <div class="circular-progress-wrapper">
+                            <div class="circular-progress">
+                                <div class="circular-progress-value">
+                                    <span class="progress-val">75%</span>
+                                    <span class="progress-label">Used</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Data details breakdown -->
+                        <div class="storage-details">
+                            
+                            <!-- Storage Type: Documents -->
+                            <div class="storage-detail-item">
+                                <div class="detail-label-group">
+                                    <span class="color-dot dot-completed"></span>
+                                    <span class="storage-type">Documents</span>
+                                </div>
+                                <span class="storage-amount">15 GB</span>
+                            </div>
+
+                            <!-- Storage Type: Media -->
+                            <div class="storage-detail-item">
+                                <div class="detail-label-group">
+                                    <span class="color-dot dot-primary"></span>
+                                    <span class="storage-type">Media Files</span>
+                                </div>
+                                <span class="storage-amount">45 GB</span>
+                            </div>
+
+                            <!-- Storage Type: System backups -->
+                            <div class="storage-detail-item">
+                                <div class="detail-label-group">
+                                    <span class="color-dot dot-warning"></span>
+                                    <span class="storage-type">Backups</span>
+                                </div>
+                                <span class="storage-amount">15 GB</span>
+                            </div>
+
+                            <!-- Storage Type: Free -->
+                            <div class="storage-detail-item">
+                                <div class="detail-label-group">
+                                    <span class="color-dot dot-secondary"></span>
+                                    <span class="storage-type">Free Space</span>
+                                </div>
+                                <span class="storage-amount">25 GB</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Premium Footer -->
+        <footer class="footer" id="app-footer">
+            <div class="footer-left">
+                <p>Copyright &copy; 2026 <span class="brand-highlight">PulseBoard</span>. All rights reserved.</p>
+            </div>
+            <div class="footer-center">
+                <span>Version 2.4.1-Stable</span>
+            </div>
+            <div class="footer-right">
+                <a href="#privacy" class="footer-link">Privacy Policy</a>
+                <span class="dot-separator">•</span>
+                <a href="#terms" class="footer-link">Terms of Service</a>
+                <span class="dot-separator">•</span>
+                <a href="#help" class="footer-link">Support Helpdesk</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
