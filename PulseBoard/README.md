@@ -6,8 +6,8 @@ PulseBoard is a premium, high-performance, and fully responsive SaaS admin dashb
 
 ## Live Preview & Repository
 
-- **Live Demo:** [Netlify Live Preview Placeholder]
-- **GitHub Repository:** [GitHub Repository Link Placeholder]
+- **Live Demo:** [https://hilarious-capybara-3b0fb7.netlify.app](https://hilarious-capybara-3b0fb7.netlify.app)
+- **GitHub Repository:** [https://github.com/JayanthKumarChinthakindi/html-css-projects](https://github.com/JayanthKumarChinthakindi/html-css-projects)
 
 ---
 
