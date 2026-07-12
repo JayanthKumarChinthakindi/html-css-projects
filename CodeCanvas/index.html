@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeCanvas - A premium digital agency designing the future, one pixel at a time. Specialized in web design, frontend development, UI/UX, brand identity, motion design, and performance optimization.">
+  <meta name="author" content="CodeCanvas Agency">
+  <title>CodeCanvas | Where Code Meets Creativity</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Decorative Mesh and Blobs -->
+  <div class="bg-mesh">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo" id="logo-link">
+        <svg class="logo-icon" viewBox="0 0 40 40" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="url(#logo-grad)" />
+          <path d="M12 14L8 20L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M28 14L32 20L28 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 12L18 28" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6366F1" />
+              <stop offset="1" stop-color="#8B5CF6" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Code</span>Canvas
+      </a>
+
+      <!-- CSS Checkbox Hack for Mobile Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+      <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </label>
+
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Start Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-glow">Now Accepting Q3 Projects</div>
+          <h1 class="hero-title">
+            Designing the Future,<br>
+            <span class="text-gradient">One Pixel</span> at a Time.
+          </h1>
+          <p class="hero-desc">
+            We are a premium digital agency crafting cutting-edge web applications, interactive interfaces, and cohesive brand systems. Where robust code meets boundless human creativity.
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+            <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Premium Animated SVG Illustration -->
+          <svg class="hero-svg" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Background grids/glows inside SVG -->
+            <circle cx="250" cy="250" r="180" fill="url(#hero-radial)" opacity="0.3" class="svg-glow-circle" />
+            
+            <!-- Grid Matrix Lines -->
+            <path d="M50 150H450M50 250H450M50 350H450M150 50V450M250 50V450M350 50V450" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1" />
+            
+            <!-- Layer 1: Base Platform (Perspective Grid) -->
+            <g class="float-element layer-base" transform="translate(0, 20)">
+              <polygon points="100,380 250,440 400,380 250,320" fill="rgba(99, 102, 241, 0.05)" stroke="rgba(99, 102, 241, 0.15)" stroke-width="1.5" />
+              <polygon points="120,380 250,430 380,380 250,330" fill="rgba(34, 211, 238, 0.03)" stroke="rgba(34, 211, 238, 0.1)" stroke-width="1" />
+            </g>
+
+            <!-- Layer 2: Middle floating dashboard -->
+            <g class="float-element layer-dashboard" transform="translate(0, -10)">
+              <!-- Floating Card -->
+              <rect x="140" y="160" width="220" height="140" rx="16" fill="rgba(11, 17, 32, 0.75)" stroke="url(#card-stroke-grad)" stroke-width="2" class="glass-rect" />
+              <!-- Top bar controls -->
+              <circle cx="165" cy="180" r="4" fill="#FF5F56" />
+              <circle cx="177" cy="180" r="4" fill="#FFBD2E" />
+              <circle cx="189" cy="180" r="4" fill="#27C93F" />
+              <!-- Layout Blocks inside Dashboard -->
+              <rect x="160" y="200" width="60" height="40" rx="6" fill="rgba(99, 102, 241, 0.2)" />
+              <rect x="230" y="200" width="110" height="8" rx="4" fill="#E5E7EB" fill-opacity="0.2" />
+              <rect x="230" y="216" width="80" height="8" rx="4" fill="#E5E7EB" fill-opacity="0.1" />
+              <rect x="230" y="232" width="95" height="8" rx="4" fill="url(#accent-grad)" />
+              
+              <!-- Mini chart inside card -->
+              <path d="M160 280 L 190 260 L 220 270 L 250 250 L 280 275 L 310 245 L 340 265" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" class="draw-line-anim" />
+              <circle cx="310" cy="245" r="3" fill="#22D3EE" class="pulse-dot" />
+            </g>
+
+            <!-- Layer 3: Top floating elements -->
+            <g class="float-element layer-creative">
+              <!-- Code Tag badge -->
+              <g transform="translate(80, 100)" class="float-sub-1">
+                <rect width="80" height="36" rx="10" fill="rgba(17, 24, 39, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+                <text x="40" y="22" fill="#8B5CF6" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" text-anchor="middle">&lt;code&gt;</text>
+              </g>
+              <!-- Sparkle Canvas badge -->
+              <g transform="translate(340, 110)" class="float-sub-2">
+                <rect width="90" height="36" rx="10" fill="rgba(17, 24, 39, 0.85)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+                <text x="45" y="22" fill="#22D3EE" font-family="'Outfit', sans-serif" font-size="12" font-weight="600" text-anchor="middle">🎨 Canvas</text>
+              </g>
+              <!-- Sphere 3D -->
+              <circle cx="380" cy="310" r="16" fill="url(#sphere-grad)" class="float-sub-3" />
+              <!-- Torus / Ring -->
+              <path d="M 120 280 A 15 10 0 1 0 121 280" fill="none" stroke="#6366F1" stroke-width="6" stroke-linecap="round" class="rotate-ring" transform="rotate(15 120 280)" />
+            </g>
+
+            <defs>
+              <radialGradient id="hero-radial" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#6366F1" />
+                <stop offset="100%" stop-color="#050816" stop-opacity="0" />
+              </radialGradient>
+              <linearGradient id="card-stroke-grad" x1="140" y1="160" x2="360" y2="300" gradientUnits="userSpaceOnUse">
+                <stop stop-color="rgba(255, 255, 255, 0.15)" />
+                <stop offset="0.5" stop-color="rgba(99, 102, 241, 0.3)" />
+                <stop offset="1" stop-color="rgba(34, 211, 238, 0.15)" />
+              </linearGradient>
+              <linearGradient id="accent-grad" x1="230" y1="232" x2="325" y2="232" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#22D3EE" />
+                <stop offset="1" stop-color="#8B5CF6" />
+              </linearGradient>
+              <radialGradient id="sphere-grad" cx="30%" cy="30%" r="70%">
+                <stop stop-color="#22D3EE" />
+                <stop offset="50%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#050816" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-section">
+      <div class="container">
+        <p class="trusted-title">Trusted by innovative startups and industry leaders</p>
+        <div class="trusted-grid">
+          <!-- Brand 1: TechFlow -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 12L20 8L30 12L20 28L10 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M20 8V28" stroke="currentColor" stroke-width="2"/>
+              <text x="40" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">TechFlow</text>
+            </svg>
+          </div>
+          <!-- Brand 2: Apex -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 30L25 10L40 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 20H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <text x="50" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">APEX</text>
+            </svg>
+          </div>
+          <!-- Brand 3: Prism -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="25,8 40,20 30,32 10,24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <text x="50" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">PRISM</text>
+            </svg>
+          </div>
+          <!-- Brand 4: Nova -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="2"/>
+              <circle cx="20" cy="20" r="4" fill="currentColor"/>
+              <text x="40" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">NOVA</text>
+            </svg>
+          </div>
+          <!-- Brand 5: Cyber -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="10" width="24" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 20H26" stroke="currentColor" stroke-width="2"/>
+              <text x="42" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">CYBER</text>
+            </svg>
+          </div>
+          <!-- Brand 6: Vertex -->
+          <div class="brand-logo">
+            <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 10H30L20 30L10 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <text x="40" y="24" fill="currentColor" font-family="'Outfit', sans-serif" font-size="14" font-weight="700">VERTEX</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Services We Provide</h2>
+          <p class="section-desc">We offer end-to-end digital solutions designed to elevate your brand's presence, streamline user interactions, and execute robust tech solutions.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Web Design -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+                <path d="M6 8h.01M10 8h.01M14 8h.01" />
+              </svg>
+            </div>
+            <h3 class="service-title">Web Design</h3>
+            <p class="service-desc-card">Beautiful, responsive interface layouts tailored to your user base, engineered to drive engagement and visual awe.</p>
+          </div>
+
+          <!-- Card 2: Frontend Development -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+                <line x1="14" y1="4" x2="10" y2="20" />
+              </svg>
+            </div>
+            <h3 class="service-title">Frontend Dev</h3>
+            <p class="service-desc-card">Pixel-perfect, performance-optimized, and highly interactive clean web page builds using modern HTML5, CSS3, and modern standards.</p>
+          </div>
+
+          <!-- Card 3: UI/UX Design -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                <path d="M2 12h20" />
+              </svg>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-desc-card">Detailed user journey maps, wireframes, and prototypes based on user testing to optimize digital interactions.</p>
+          </div>
+
+          <!-- Card 4: Brand Identity -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h3 class="service-title">Brand Identity</h3>
+            <p class="service-desc-card">Designing iconic logos, typography configurations, color guidelines, and design systems for absolute consistency.</p>
+          </div>
+
+          <!-- Card 5: Motion Design -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 22 22 22" />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+            </div>
+            <h3 class="service-title">Motion Design</h3>
+            <p class="service-desc-card">Bespoke animations, transitions, and immersive SVG micro-interactions that elevate brand storytelling.</p>
+          </div>
+
+          <!-- Card 6: Performance Optimization -->
+          <div class="service-card">
+            <div class="card-glow-bg"></div>
+            <div class="service-icon-wrapper">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+                <path d="M12 2a10 10 0 0 1 10 10" stroke-dasharray="4 4" />
+              </svg>
+            </div>
+            <h3 class="service-title">Performance</h3>
+            <p class="service-desc-card">Advanced asset optimization, code minification, layout stabilization, and fast page load setups for flawless UX metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+      <div class="container about-container">
+        <div class="about-visual">
+          <div class="stats-card-grid">
+            <div class="stat-card">
+              <span class="stat-num text-gradient">10+</span>
+              <span class="stat-lbl">Years Experience</span>
+            </div>
+            <div class="stat-card card-lift">
+              <span class="stat-num text-gradient">150+</span>
+              <span class="stat-lbl">Projects Delivered</span>
+            </div>
+            <div class="stat-card card-lift">
+              <span class="stat-num text-gradient">98%</span>
+              <span class="stat-lbl">Client Satisfaction</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num text-gradient">50+</span>
+              <span class="stat-lbl">Global Experts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title">Where Code Meets Creativity</h2>
+          <p class="about-desc">
+            At CodeCanvas, we believe that exceptional web development isn't just about clean code—it's about the interactive experiences that code facilitates. We bridge the gap between creative visual artistry and robust technical systems.
+          </p>
+          <p class="about-desc">
+            Our team consists of passionate engineers, visionary designers, and strategic thinkers working together to craft futuristic digital experiences. We design, program, and launch digital assets that help brands disrupt their markets.
+          </p>
+          <ul class="about-list">
+            <li>
+              <svg class="list-bullet" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Modern responsive architectures
+            </li>
+            <li>
+              <svg class="list-bullet" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              High-performance, lightweight asset files
+            </li>
+            <li>
+              <svg class="list-bullet" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              Bespoke animations and interactive mechanics
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects (Portfolio) -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Case Studies</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">Take a look at some of our premium projects built with design focus, absolute pixel accuracy, and robust infrastructure.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <!-- Project 1: E-Commerce Platform -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <rect x="35" y="40" width="80" height="80" rx="6" fill="#6366F1" fill-opacity="0.1" stroke="#6366F1" stroke-width="1" />
+                <!-- Shopping cart visual sketch inside SVG -->
+                <path d="M60 90h30l-5-20H65l-5 20z" fill="none" stroke="#6366F1" stroke-width="2"/>
+                <circle cx="70" cy="95" r="3" fill="#6366F1"/>
+                <circle cx="85" cy="95" r="3" fill="#6366F1"/>
+                <rect x="130" y="45" width="150" height="10" rx="3" fill="white" fill-opacity="0.9" />
+                <rect x="130" y="65" width="100" height="8" rx="3" fill="white" fill-opacity="0.4" />
+                <rect x="130" y="85" width="50" height="12" rx="3" fill="#22D3EE" />
+                <!-- Bottom items -->
+                <rect x="35" y="140" width="75" height="40" rx="4" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <rect x="120" y="140" width="75" height="40" rx="4" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <rect x="205" y="140" width="75" height="40" rx="4" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">E-Commerce</span>
+                <h3 class="portfolio-card-title">Veloce Storefront</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Finance Dashboard -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <!-- Graphs sketches -->
+                <path d="M40 160 L 90 120 L 140 140 L 190 90 L 240 110 L 280 60" fill="none" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+                <path d="M40 160 L 90 120 L 140 140 L 190 90 L 240 110 L 280 60 L 280 170 L 40 170 Z" fill="url(#p2-grad-main)" opacity="0.15"/>
+                <circle cx="190" cy="90" r="4" fill="#22D3EE" />
+                <line x1="40" y1="170" x2="280" y2="170" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+                <line x1="40" y1="60" x2="280" y2="60" stroke="rgba(255,255,255,0.05)" stroke-dasharray="4 4"/>
+                <defs>
+                  <linearGradient id="p2-grad-main" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#8B5CF6"/>
+                    <stop offset="100%" stop-color="#0b1120" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Fintech</span>
+                <h3 class="portfolio-card-title">Apex Analytics</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Travel Website -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <!-- Scenic/UI sketch -->
+                <path d="M40 170 C 80 110, 110 130, 150 90 C 200 150, 240 120, 280 170" fill="#6366F1" fill-opacity="0.2" stroke="#6366F1" stroke-width="1" />
+                <circle cx="230" cy="70" r="16" fill="#22D3EE" opacity="0.6" />
+                <rect x="40" y="40" width="100" height="12" rx="4" fill="white" fill-opacity="0.9"/>
+                <rect x="40" y="60" width="60" height="8" rx="4" fill="white" fill-opacity="0.4"/>
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Web Experience</span>
+                <h3 class="portfolio-card-title">Nomad Escapes</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Restaurant Brand -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <!-- Geometric plates sketch -->
+                <circle cx="160" cy="110" r="45" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-dasharray="6 3"/>
+                <circle cx="160" cy="110" r="35" fill="rgba(34, 211, 238, 0.1)"/>
+                <path d="M145 100l15 20 15-20" fill="none" stroke="#22D3EE" stroke-width="2"/>
+                <text x="160" y="165" text-anchor="middle" fill="white" fill-opacity="0.3" font-family="sans-serif" font-size="8">E A T E R Y</text>
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Brand Identity</span>
+                <h3 class="portfolio-card-title">Savory Kitchen</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Healthcare Portal -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <!-- Heartbeat pulse visual -->
+                <path d="M40 110 h 60 l 10 -25 l 10 50 l 10 -40 l 10 25 h 20 l 15 -35 l 15 55 l 10 -30 h 60" fill="none" stroke="#6366F1" stroke-width="2" stroke-linejoin="round"/>
+                <rect x="40" y="40" width="70" height="20" rx="4" fill="rgba(255,255,255,0.05)"/>
+                <rect x="50" y="48" width="50" height="4" fill="#22D3EE" rx="2"/>
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Medical Tech</span>
+                <h3 class="portfolio-card-title">Pulse Portal</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Creative Portfolio -->
+          <div class="portfolio-card">
+            <div class="portfolio-image-wrapper">
+              <svg class="portfolio-svg-asset" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="320" height="220" fill="#0b1120" />
+                <rect x="20" y="20" width="280" height="180" rx="8" fill="#111827" stroke="rgba(255,255,255,0.05)" />
+                <!-- Abstract grid layout -->
+                <rect x="35" y="35" width="115" height="70" rx="4" fill="#8B5CF6" fill-opacity="0.15" stroke="#8B5CF6" />
+                <rect x="160" y="35" width="125" height="120" rx="4" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)"/>
+                <rect x="35" y="115" width="115" height="40" rx="4" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.1)"/>
+                <circle cx="92" cy="135" r="8" fill="#22D3EE"/>
+              </svg>
+              <div class="portfolio-overlay">
+                <span class="portfolio-category">Creative Studio</span>
+                <h3 class="portfolio-card-title">Prism Showcase</h3>
+                <a href="#contact" class="portfolio-btn">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section (Timeline) -->
+    <section id="process" class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How We Work</span>
+          <h2 class="section-title">Our Project Process</h2>
+          <p class="section-desc">A systematic, design-driven workflow ensuring high accuracy, consistent pacing, and premium quality from research to launch.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line">
+            <div class="timeline-progress-indicator"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-content">
+              <span class="process-step">Phase 01</span>
+              <h3 class="process-title">Discover</h3>
+              <p class="process-desc-text">We consult closely to discover your business objectives, technical needs, and key creative expectations.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-content">
+              <span class="process-step">Phase 02</span>
+              <h3 class="process-title">Research</h3>
+              <p class="process-desc-text">Analyzing market dynamics, user profiles, and technology options to formulate a solid architectural plan.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-content">
+              <span class="process-step">Phase 03</span>
+              <h3 class="process-title">Design</h3>
+              <p class="process-desc-text">Drafting wireframes, designing sleek mockups, and crafting responsive UI patterns using Figma guidelines.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">4</div>
+            <div class="timeline-content">
+              <span class="process-step">Phase 04</span>
+              <h3 class="process-title">Develop</h3>
+              <p class="process-desc-text">Coding clean semantic HTML structures and robust, responsive styling modules with performant animations.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-item">
+            <div class="timeline-badge">5</div>
+            <div class="timeline-content">
+              <span class="process-step">Phase 05</span>
+              <h3 class="process-title">Launch</h3>
+              <p class="process-desc-text">Final validation checks, code compilation, deployment pipelines, and post-launch SEO audits.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Endorsements</span>
+          <h2 class="section-title">Client Feedback</h2>
+          <p class="section-desc">See what our clients say about the execution quality, speed, and design precision of the CodeCanvas team.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "Working with CodeCanvas transformed our digital application. The layout response speeds are incredible, and the code looks incredibly organized. Highly recommend this creative agency!"
+            </p>
+            <div class="client-info">
+              <!-- Inline SVG Avatar -->
+              <div class="client-avatar grad-1">
+                <span>SC</span>
+              </div>
+              <div>
+                <h4 class="client-name">Sarah Connor</h4>
+                <p class="client-role">Founder at TechFlow</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card featured-testimonial">
+            <div class="rating-stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "The design precision is unparalleled. They built a customized design system using raw CSS that looks spectacular across all device sizes. The animations add an elegant, smooth touch."
+            </p>
+            <div class="client-info">
+              <!-- Inline SVG Avatar -->
+              <div class="client-avatar grad-2">
+                <span>MK</span>
+              </div>
+              <div>
+                <h4 class="client-name">Marcus Kael</h4>
+                <p class="client-role">Product Manager at APEX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="rating-stars">
+              ★★★★★
+            </div>
+            <p class="testimonial-text">
+              "CodeCanvas delivered our complex multi-page portal on-time and with flawless performance indices. The user journey is intuitive, and our conversion rate has scaled significantly."
+            </p>
+            <div class="client-info">
+              <!-- Inline SVG Avatar -->
+              <div class="client-avatar grad-3">
+                <span>EL</span>
+              </div>
+              <div>
+                <h4 class="client-name">Elena Rostova</h4>
+                <p class="client-role">Lead Engineer at CyberCorp</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Investment</span>
+          <h2 class="section-title">Transparent Pricing Plans</h2>
+          <p class="section-desc">Select the development and design tier that fits your scope. No hidden costs. Premium delivery guaranteed.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Card 1: Starter -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Starter</h3>
+            <div class="price-container">
+              <span class="price-symbol">$</span>
+              <span class="price-val">2,999</span>
+              <span class="price-duration">/ project</span>
+            </div>
+            <p class="plan-desc">For startups wanting an impactful web landing presence.</p>
+            <ul class="plan-features">
+              <li>1 Professional Landing Page</li>
+              <li>Sleek Vanilla HTML/CSS Code</li>
+              <li>Responsive Desktop/Mobile Layout</li>
+              <li>Standard SVG Graphic Assets</li>
+              <li>Basic Contact Form integration</li>
+              <li class="disabled">Custom Design System</li>
+              <li class="disabled">Performance Code Audits</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-full">Choose Starter</a>
+          </div>
+
+          <!-- Card 2: Professional (Featured) -->
+          <div class="pricing-card featured-plan">
+            <div class="pricing-tag">Popular</div>
+            <h3 class="plan-name">Professional</h3>
+            <div class="price-container">
+              <span class="price-symbol">$</span>
+              <span class="price-val">5,999</span>
+              <span class="price-duration">/ project</span>
+            </div>
+            <p class="plan-desc">Perfect fit for businesses scaling up their online brand identity.</p>
+            <ul class="plan-features">
+              <li>Up to 5 Responsive Subpages</li>
+              <li>Interactive SVG & Keyframe Animations</li>
+              <li>Custom CSS Grid Layout Architecture</li>
+              <li>Tailored Typographic Style Sheets</li>
+              <li>Interactive Glassmorphic Components</li>
+              <li>Complete Design System Guide</li>
+              <li>Advanced Performance Tweaking</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Choose Professional</a>
+          </div>
+
+          <!-- Card 3: Enterprise -->
+          <div class="pricing-card">
+            <h3 class="plan-name">Enterprise</h3>
+            <div class="price-container">
+              <span class="price-symbol">$</span>
+              <span class="price-val">9,999</span>
+              <span class="price-duration">/ project</span>
+            </div>
+            <p class="plan-desc">For full digital platforms requiring complete design assets.</p>
+            <ul class="plan-features">
+              <li>Multi-section Web Platforms</li>
+              <li>Premium Isometric SVG Layouts</li>
+              <li>Dedicated Code Optimization Audits</li>
+              <li>Accessible Keyboard Navigation Check</li>
+              <li>Custom Animation Timing Sequences</li>
+              <li>Continuous Deployment Workflows</li>
+              <li>Priority Developer Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary btn-full">Choose Enterprise</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Architects</span>
+          <h2 class="section-title">Meet Our Experts</h2>
+          <p class="section-desc">The creative professionals combining code and visual art to deliver CodeCanvas's premium standards.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <!-- Stylized abstract portrait SVG -->
+              <svg viewBox="0 0 200 240" fill="none" class="team-svg-avatar" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="240" rx="16" fill="#0b1120"/>
+                <circle cx="100" cy="90" r="45" fill="url(#t-grad-1)"/>
+                <path d="M40 190c0-25 25-35 60-35s60 10 60 35v15H40v-15z" fill="url(#t-grad-1)" opacity="0.8"/>
+                <circle cx="130" cy="70" r="10" fill="#22D3EE" opacity="0.6"/>
+                <defs>
+                  <linearGradient id="t-grad-1" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#6366F1"/>
+                    <stop offset="1" stop-color="#8B5CF6"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-icon" aria-label="Twitter">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="team-social-icon" aria-label="LinkedIn">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="team-member-info">
+              <h4 class="member-name">Alexander Wright</h4>
+              <p class="member-role">CEO & Founder</p>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <!-- Stylized abstract portrait SVG -->
+              <svg viewBox="0 0 200 240" fill="none" class="team-svg-avatar" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="240" rx="16" fill="#0b1120"/>
+                <circle cx="100" cy="90" r="45" fill="url(#t-grad-2)"/>
+                <path d="M40 190c0-25 25-35 60-35s60 10 60 35v15H40v-15z" fill="url(#t-grad-2)" opacity="0.8"/>
+                <polygon points="120,50 140,70 110,80" fill="#22D3EE" opacity="0.7"/>
+                <defs>
+                  <linearGradient id="t-grad-2" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="1" stop-color="#22D3EE"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-icon" aria-label="Twitter">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="team-social-icon" aria-label="LinkedIn">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="team-member-info">
+              <h4 class="member-name">Sophia Sterling</h4>
+              <p class="member-role">Creative Director</p>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <!-- Stylized abstract portrait SVG -->
+              <svg viewBox="0 0 200 240" fill="none" class="team-svg-avatar" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="240" rx="16" fill="#0b1120"/>
+                <circle cx="100" cy="90" r="45" fill="url(#t-grad-3)"/>
+                <path d="M40 190c0-25 25-35 60-35s60 10 60 35v15H40v-15z" fill="url(#t-grad-3)" opacity="0.8"/>
+                <rect x="75" y="85" width="50" height="10" rx="5" fill="#6366F1" opacity="0.5"/>
+                <defs>
+                  <linearGradient id="t-grad-3" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#22D3EE"/>
+                    <stop offset="1" stop-color="#6366F1"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="team-social-overlay">
+                <a href="#" class="team-social-icon" aria-label="Twitter">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                </a>
+                <a href="#" class="team-social-icon" aria-label="LinkedIn">
+                  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="team-member-info">
+              <h4 class="member-name">Ethan Vane</h4>
+              <p class="member-role">Lead Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-banner-section">
+      <div class="cta-mesh-glow"></div>
+      <div class="container cta-container">
+        <h2 class="cta-title">Let's Build Something<br>Amazing Together.</h2>
+        <p class="cta-desc">
+          Ready to scale your digital presence? Get in touch today for a free design audit and technical scope review. We bring code and creativity together.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-large">Start Your Project</a>
+        
+        <!-- Floating shapes in CTA -->
+        <div class="cta-shape shape-1"></div>
+        <div class="cta-shape shape-2"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container contact-container">
+        <!-- Contact Details -->
+        <div class="contact-info-col">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="contact-sub-text">
+            Have a project in mind or looking to collaborate? Send us a message and we'll reply within 24 hours.
+          </p>
+
+          <div class="contact-details-list">
+            <!-- Email -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="detail-label">Email Us</h4>
+                <a href="mailto:hello@codecanvas.agency" class="detail-value">hello@codecanvas.agency</a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="detail-label">Call Us</h4>
+                <a href="tel:+15552345678" class="detail-value">+1 (555) 234-5678</a>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="detail-label">Our Office</h4>
+                <p class="detail-value text-white">404 Gridway Ave, Suite 101, San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col">
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Discussion" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" rows="5" class="form-input text-area" placeholder="Tell us about your project requirements, scope, timeline..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Footer Col 1: Brand & About -->
+      <div class="footer-col brand-col">
+        <a href="#" class="logo footer-logo">
+          <svg class="logo-icon" viewBox="0 0 40 40" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="40" height="40" rx="8" fill="url(#logo-grad-f)" />
+            <path d="M12 14L8 20L12 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 14L32 20L28 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 12L18 28" stroke="#22D3EE" stroke-width="2.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="logo-grad-f" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6366F1" />
+                <stop offset="1" stop-color="#8B5CF6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Code</span>Canvas
+        </a>
+        <p class="footer-desc">
+          Crafting premium digital platforms where clean code meets boundary-pushing creativity. Let's make your brand shine online.
+        </p>
+        <div class="footer-social-row">
+          <a href="#" class="social-circle" aria-label="Twitter">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="GitHub">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="#" class="social-circle" aria-label="LinkedIn">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Footer Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Our Portfolio</a></li>
+          <li><a href="#process">Work Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3: Services -->
+      <div class="footer-col">
+        <h4 class="footer-title">Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Web Design</a></li>
+          <li><a href="#services">Frontend Dev</a></li>
+          <li><a href="#services">UI/UX Design</a></li>
+          <li><a href="#services">Brand Identity</a></li>
+          <li><a href="#services">Motion Design</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 4: Newsletter -->
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-title">Subscribe</h4>
+        <p class="newsletter-desc">Stay updated with our latest design insights, creative trends, and development logs.</p>
+        <form class="newsletter-form" action="#" method="POST">
+          <input type="email" placeholder="Your Email" class="newsletter-input" required aria-label="Email for newsletter subscription">
+          <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="container footer-bottom">
+      <p>&copy; 2026 CodeCanvas Agency. All rights reserved. Designed & coded for portfolio showcase.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
