@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScaleUp | Modern Business Auto-Scaling Platform</title>
+  <meta name="description" content="ScaleUp automates your system infrastructure and operations, allowing your business to expand efficiently without limits.">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="bg-[#080b11] text-slate-100 antialiased font-sans">
+  
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-800/60 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/30">
+          <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+        </span>
+        <span class="text-xl font-bold tracking-tight bg-gradient-to-r from-white via-slate-100 to-slate-400 bg-clip-text text-transparent">ScaleUp</span>
+      </div>
+      
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Features</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Pricing</a>
+        <a href="#testimonials" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Testimonials</a>
+        <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">FAQ</a>
+      </nav>
+
+      <!-- CTA Desktop Buttons -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">Sign In</a>
+        <a href="#pricing" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-sm transition-all duration-200 shadow-md shadow-indigo-600/20 hover:scale-105 active:scale-95">Get Started</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors focus:outline-none" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden glass border-b border-slate-800/80 px-4 pt-2 pb-6 flex flex-col gap-4 animate-fade-in">
+      <a href="#features" class="block py-2 text-base font-medium text-slate-300 hover:text-white border-b border-slate-800/50">Features</a>
+      <a href="#pricing" class="block py-2 text-base font-medium text-slate-300 hover:text-white border-b border-slate-800/50">Pricing</a>
+      <a href="#testimonials" class="block py-2 text-base font-medium text-slate-300 hover:text-white border-b border-slate-800/50">Testimonials</a>
+      <a href="#faq" class="block py-2 text-base font-medium text-slate-300 hover:text-white border-b border-slate-800/50">FAQ</a>
+      <div class="flex flex-col gap-3 pt-4">
+        <a href="#pricing" class="w-full text-center py-2.5 rounded-xl border border-slate-700 hover:border-slate-500 font-medium text-slate-300 transition-colors">Sign In</a>
+        <a href="#pricing" class="w-full text-center py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-white transition-colors">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-24 md:pt-44 md:pb-36 overflow-hidden max-w-7xl mx-auto px-4">
+    <!-- Glow overlays -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/2 -right-40 w-96 h-96 bg-violet-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="relative flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      
+      <!-- Hero Left: Text & CTA -->
+      <div class="flex-1 text-center md:text-left space-y-6 md:space-y-8 max-w-xl md:max-w-none">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wide uppercase">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+          Next-Gen Platform Launch
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
+          Scale your business to the <span class="bg-gradient-to-r from-indigo-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">next level</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-400 leading-relaxed max-w-lg mx-auto md:mx-0">
+          ScaleUp automatically optimizes your operations, streamlines team workflow, and powers analytics so you can focus on building what matters.
+        </p>
+        
+        <div class="flex flex-row justify-center md:justify-start gap-4 items-center flex-wrap">
+          <a href="#pricing" class="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 font-semibold text-white transition-all duration-200 shadow-lg shadow-indigo-600/20 hover:scale-105 active:scale-95 text-base">
+            Start Free Trial
+          </a>
+          <a href="#features" class="px-6 py-3 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-900/50 hover:bg-slate-900 font-semibold text-slate-300 transition-all duration-200 hover:scale-105 active:scale-95 text-base">
+            Book a Demo
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+          <div class="flex -space-x-2">
+            <span class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-300">JD</span>
+            <span class="w-8 h-8 rounded-full bg-slate-700 border border-slate-600 flex items-center justify-center text-xs font-bold text-white">AB</span>
+            <span class="w-8 h-8 rounded-full bg-slate-600 border border-slate-500 flex items-center justify-center text-xs font-bold text-slate-200">MK</span>
+          </div>
+          <span class="text-sm text-slate-400 text-center sm:text-left">
+            Trusted by over <strong class="text-white font-semibold">12,000+</strong> scaling companies.
+          </span>
+        </div>
+      </div>
+      
+      <!-- Hero Right: Mockup Image -->
+      <div class="flex-1 w-full max-w-lg md:max-w-none relative animate-float">
+        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-violet-600/20 rounded-2xl blur-2xl opacity-60"></div>
+        <div class="relative glass-card p-2 rounded-2xl border border-slate-700/50 shadow-2xl overflow-hidden">
+          <img src="./src/hero-dashboard.png" alt="ScaleUp Dashboard Mockup" class="w-full h-auto rounded-xl shadow-inner border border-slate-800/80 object-cover" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-24 max-w-7xl mx-auto px-4 relative">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-violet-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Built for Speed & Scale</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+        Powerful core services to supercharge growth
+      </p>
+      <p class="text-base text-slate-400">
+        Say goodbye to infrastructure complexity. ScaleUp handles the heavy lifting, delivering metrics and automations that deliver value from day one.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Feature 1 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all duration-300 group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Real-time Analytics</h3>
+        <p class="text-slate-400 leading-relaxed text-sm">
+          Track traffic, processing times, database query delays, and customer conversions as they happen with high-fidelity visualization dashboards.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all duration-300 group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Intelligent Auto-Scaling</h3>
+        <p class="text-slate-400 leading-relaxed text-sm">
+          Our intelligent resource manager deploys cloud clusters instantly during spikes and dials down during lulls, optimizing your runtime costs.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/30 transition-all duration-300 group hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+        <p class="text-slate-400 leading-relaxed text-sm">
+          Secure everything with AES-256 data protection, isolated VPC configurations, automated role permissions, and full SOC2 compliance audits.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-24 max-w-7xl mx-auto px-4 relative">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Transparent Pricing</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+        A plan tailored to fit your goals
+      </p>
+      <p class="text-base text-slate-400">
+        Choose a pricing plan that fits your current operational footprint. No contracts, upgrade or downgrade anytime.
+      </p>
+    </div>
+
+    <!-- Pricing 3-Tier Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-8">
+      
+      <!-- Tier 1: Starter -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all duration-300">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-200">Starter</h3>
+            <p class="text-sm text-slate-400 mt-1">For validation and early testing.</p>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-white">$29</span>
+            <span class="text-sm text-slate-400">/mo</span>
+          </div>
+          
+          <!-- Starter Features -->
+          <ul class="space-y-4 pt-4 border-t border-slate-800/80">
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Up to 3,000 monthly events</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Basic analytics dashboard</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Community Slack access</span>
+            </li>
+            <li class="flex items-center gap-3 opacity-40">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-slate-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-400 line-through">Automated scaling nodes</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-8">
+          <a href="#pricing" class="block w-full py-3 text-center rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-slate-200 transition-colors duration-200">
+            Choose Starter
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 2: Pro (Highlighted Tier) -->
+      <div class="bg-slate-900 border-2 border-indigo-500/40 p-8 rounded-2xl flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:border-indigo-500 md:-translate-y-4">
+        <!-- Badge -->
+        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+          Most Popular
+        </span>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-bold text-white">Pro Plan</h3>
+            <p class="text-sm text-slate-300 mt-1">Excellent choice for scaling startups.</p>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-extrabold text-white">$79</span>
+            <span class="text-sm text-slate-300">/mo</span>
+          </div>
+          
+          <!-- Pro Features -->
+          <ul class="space-y-4 pt-4 border-t border-slate-800/80">
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-white">Up to 50,000 monthly events</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-white">Advanced custom dashboards</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-white">Automated scaling (5 nodes max)</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center text-white">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-white">Email support (under 24h response)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-8">
+          <a href="#pricing" class="block w-full py-3 text-center rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 font-bold text-white transition-all duration-200 shadow-md shadow-indigo-600/20 hover:scale-[1.02]">
+            Upgrade to Pro
+          </a>
+        </div>
+      </div>
+
+      <!-- Tier 3: Enterprise -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all duration-300">
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-200">Enterprise</h3>
+            <p class="text-sm text-slate-400 mt-1">Unmatched compute scale & analytics.</p>
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-white">$249</span>
+            <span class="text-sm text-slate-400">/mo</span>
+          </div>
+          
+          <!-- Enterprise Features -->
+          <ul class="space-y-4 pt-4 border-t border-slate-800/80">
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Unlimited monthly events</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Unlimited scaling cloud instances</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">Full audit logging & VPC controls</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span class="text-sm text-slate-300">24/7 dedicated support team</span>
+            </li>
+          </ul>
+        </div>
+        <div class="pt-8">
+          <a href="#pricing" class="block w-full py-3 text-center rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-slate-200 transition-colors duration-200">
+            Contact Sales
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-24 max-w-7xl mx-auto px-4 relative">
+    <div class="absolute top-1/2 right-1/4 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+    
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Client Success</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Loved by industry leaders</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <p class="text-slate-300 text-sm leading-relaxed italic">
+          "Moving our telemetry system onto ScaleUp was the single best operational decision we made last year. We cut infrastructure maintenance by 40%."
+        </p>
+        <div class="flex items-center gap-4 mt-8">
+          <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">TH</div>
+          <div>
+            <h4 class="text-sm font-semibold text-white">Tanya Herst</h4>
+            <span class="text-xs text-slate-400">VP Architecture, AeroFlow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+        <p class="text-slate-300 text-sm leading-relaxed italic">
+          "ScaleUp's automated scaling handled our product launch spike without a single dropped packet. Amazing dashboards and even better performance."
+        </p>
+        <div class="flex items-center gap-4 mt-8">
+          <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">MA</div>
+          <div>
+            <h4 class="text-sm font-semibold text-white">Marcus Aurel</h4>
+            <span class="text-xs text-slate-400">CEO, CloudVenture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between md:col-span-3 lg:col-span-1">
+        <p class="text-slate-300 text-sm leading-relaxed italic">
+          "Highly custom dashboards allowed our product analytics team to align immediately. The integration took less than two hours."
+        </p>
+        <div class="flex items-center gap-4 mt-8">
+          <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-white text-sm">LL</div>
+          <div>
+            <h4 class="text-sm font-semibold text-white">Lara Loft</h4>
+            <span class="text-xs text-slate-400">Lead Tech PM, NexusSaaS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-24 max-w-7xl mx-auto px-4 border-t border-slate-900">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h2 class="text-xs font-semibold text-indigo-400 uppercase tracking-widest">Questions</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Frequently Asked Questions</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div class="glass-card p-6 rounded-xl border border-slate-850">
+        <h4 class="font-semibold text-white mb-2">How fast is the integration process?</h4>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          ScaleUp works with a simple npm package or an embedded script hook. Once you drop our client library in, telemetry event collection starts instantly.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl border border-slate-850">
+        <h4 class="font-semibold text-white mb-2">Are there any limits on Starter or Pro tiers?</h4>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Starter provides basic event telemetry with community-only access. Pro adds automated system scaling limits of up to 5 instances, while Enterprise unlocks unlimited throughput and dedicated VPC channels.
+        </p>
+      </div>
+
+      <div class="glass-card p-6 rounded-xl border border-slate-850">
+        <h4 class="font-semibold text-white mb-2">Is there support for customized dashboard views?</h4>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Yes! You can completely build, drag-and-drop, and filter custom panel parameters on our Pro and Enterprise dashboards to fit your operations perfectly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#05070a] border-t border-slate-900 py-12 md:py-18">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-2">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-violet-600 shadow-md">
+          <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+        </span>
+        <span class="text-base font-bold text-white tracking-tight">ScaleUp</span>
+      </div>
+
+      <div class="flex gap-8 text-sm text-slate-500">
+        <a href="#features" class="hover:text-slate-300 transition-colors">Features</a>
+        <a href="#pricing" class="hover:text-slate-300 transition-colors">Pricing</a>
+        <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+      </div>
+
+      <p class="text-xs text-slate-600 text-center md:text-right">
+        &copy; 2026 ScaleUp, Inc. All rights reserved. Crafted for hyper-scale performance.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Simple Mobile Menu Toggle Script -->
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when a link is clicked
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Header scroll background modification
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('shadow-xl', 'bg-slate-950/90', 'border-slate-800');
+        header.classList.remove('bg-white/70', 'dark:bg-slate-950/70', 'border-slate-200', 'dark:border-slate-800/60');
+      } else {
+        header.classList.remove('shadow-xl', 'bg-slate-950/90', 'border-slate-800');
+        header.classList.add('border-slate-800/60');
+      }
+    });
+  </script>
+</body>
+</html>
