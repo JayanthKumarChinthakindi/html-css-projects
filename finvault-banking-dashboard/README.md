@@ -1,7 +1,7 @@
 # FinVault – Modern Banking Dashboard
 
 ## Live Demo
-* **Live Demo Link**: *[Netlify Live Demo Link to be added here]*
+* **Live Demo Link**: [https://finvault-dashboard-sarah.netlify.app](https://finvault-dashboard-sarah.netlify.app)
 
 ## Project Overview
 FinVault is a premium, enterprise-grade, and fully responsive fintech dashboard inspired by modern financial applications like Stripe, Revolut, Wise, and Mercury. Built using **only HTML5 and Tailwind CSS**, it showcases advanced layout paradigms, CSS grid combinations, static SVG charts, and interactive behaviors **without a single line of JavaScript**.
