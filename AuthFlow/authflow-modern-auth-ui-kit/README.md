@@ -2,6 +2,8 @@
 
 AuthFlow is a premium, modern, and production-quality SaaS authentication UI kit built exclusively using **HTML5** and **Tailwind CSS**. It is designed for software engineering portfolios and modern developer portals, drawing inspiration from industry leaders like Stripe, Linear, Vercel, Notion, Clerk, and Supabase.
 
+**🌐 Live Demo:** [https://cerulean-unicorn-40033d.netlify.app](https://cerulean-unicorn-40033d.netlify.app)
+
 This kit contains 8 responsive authentication pages that share a visually cohesive design language. No JavaScript, React, Vue, or external UI libraries are used. All micro-interactions, focus rings, hover effects, scale triggers, and transitions are built entirely using pure Tailwind utilities.
 
 ---
