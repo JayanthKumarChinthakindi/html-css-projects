@@ -4,7 +4,7 @@ FlowPay is a premium, production-quality SaaS landing page built from scratch fo
 
 ## 🚀 Live Demo & Visual Previews
 
-- **Live Demo Link**: [Deploy URL (Placeholder)](https://JayanthKumarChinthakindi.github.io/html-css-projects/FlowPay/)
+- **Live Demo Link**: [Live on Netlify](https://cerulean-unicorn-40033d.netlify.app/FlowPay/)
 - **Local Preview**: Open `index.html` directly in any web browser.
 - **Interactions**:
   - Hover effects on navigation, cards, tables, pricing plans, and buttons.
