@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AuthFlow - Modern SaaS Authentication UI Kit OTP Verification Page">
+  <title>OTP Verification - AuthFlow UI Kit</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Custom Subtle Grid Pattern Styles -->
+  <style>
+    .auth-bg {
+      background-color: #f9fafb;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(249, 250, 251, 1) 100%),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z' fill='%23e5e7eb' fill-opacity='.18' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    .link-underline {
+      position: relative;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #2563eb;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .link-underline:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    /* Keyframe animation for a mock cursor blink in OTP input */
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    .otp-cursor {
+      animation: cursor-blink 1s infinite;
+    }
+  </style>
+</head>
+<body class="auth-bg text-gray-900 min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="w-full px-6 py-4 flex justify-between items-center absolute top-0 left-0 z-10">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <img src="assets/logo.svg" alt="AuthFlow Logo" class="w-8 h-8">
+      <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AuthFlow</span>
+    </a>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-grow flex items-center justify-center px-4 py-24 sm:px-6 lg:px-8">
+    <div class="w-full max-w-[440px] flex flex-col gap-8">
+      
+      <!-- Card Container -->
+      <div class="bg-white rounded-3xl border border-gray-200/80 shadow-2xl shadow-gray-200/50 p-8 sm:p-10 flex flex-col gap-6 transition-all duration-300 hover:shadow-gray-200/80">
+        
+        <!-- Heading Section -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="p-3 bg-blue-50 text-blue-600 rounded-2xl border border-blue-100">
+              <!-- Lock Shield Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+          </div>
+          <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Two-factor verification</h1>
+          <p class="text-sm text-gray-500 mt-2 leading-relaxed">Enter the 6-digit verification code sent to your registered device.</p>
+        </div>
+
+        <!-- Form Section -->
+        <form action="success.html" method="GET" class="flex flex-col gap-6">
+          
+          <!-- OTP 6-Input Grid -->
+          <div class="flex flex-col gap-2">
+            <label class="text-xs font-bold text-gray-400 uppercase tracking-widest text-center mb-1">Enter Security Code</label>
+            
+            <div class="grid grid-cols-6 gap-2.5 sm:gap-3.5">
+              <!-- Box 1 (Filled) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" maxlength="1" value="4" required class="w-full text-center py-3 bg-gray-50/50 border border-gray-200 rounded-xl text-lg font-bold text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 select-all transition-all duration-150">
+              </div>
+              
+              <!-- Box 2 (Filled) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" maxlength="1" value="8" required class="w-full text-center py-3 bg-gray-50/50 border border-gray-200 rounded-xl text-lg font-bold text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 select-all transition-all duration-150">
+              </div>
+
+              <!-- Box 3 (Filled) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" maxlength="1" value="2" required class="w-full text-center py-3 bg-gray-50/50 border border-gray-200 rounded-xl text-lg font-bold text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 select-all transition-all duration-150">
+              </div>
+
+              <!-- Box 4 (Active Focus/Cursor Blinking) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" id="otp-focus-demo" maxlength="1" placeholder="" class="w-full text-center py-3 bg-white border-2 border-blue-600 rounded-xl text-lg font-bold text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-600/10 transition-all duration-150 ring-4 ring-blue-600/10">
+                <!-- Visual Mock Blinking Cursor -->
+                <span class="absolute w-[2px] h-6 bg-blue-600 rounded otp-cursor pointer-events-none"></span>
+              </div>
+
+              <!-- Box 5 (Empty/Placeholder) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" maxlength="1" placeholder="•" class="w-full text-center py-3 bg-white border border-gray-200 rounded-xl text-lg font-bold text-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 transition-all duration-150">
+              </div>
+
+              <!-- Box 6 (Empty/Placeholder) -->
+              <div class="relative flex items-center justify-center">
+                <input type="text" maxlength="1" placeholder="•" class="w-full text-center py-3 bg-white border border-gray-200 rounded-xl text-lg font-bold text-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 transition-all duration-150">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Countdown and Resend section -->
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-2.5 text-xs">
+            <span class="text-gray-400 font-medium flex items-center gap-1.5">
+              <!-- Clock Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Code expires in <span class="font-semibold text-gray-600">0:59</span></span>
+            </span>
+            <span class="text-gray-400">
+              Didn't receive it? 
+              <a href="#" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors link-underline">Resend code</a>
+            </span>
+          </div>
+
+          <!-- Primary Submit Button -->
+          <button type="submit" class="w-full flex items-center justify-center gap-2 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm shadow-lg shadow-blue-600/15 hover:shadow-blue-600/25 active:scale-[0.99] hover:scale-[1.01] transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-600/20">
+            Verify code
+          </button>
+        </form>
+
+        <div class="text-center mt-2">
+          <a href="index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-gray-800 transition-colors link-underline">
+            <!-- Arrow left icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            <span>Back to sign in</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Footer Elements -->
+      <footer class="flex flex-col gap-4 text-center mt-4">
+        <div class="flex justify-center gap-6 text-xs font-medium text-gray-400">
+          <a href="#" class="hover:text-gray-600 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-600 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gray-600 transition-colors">Contact Support</a>
+        </div>
+        <p class="text-[11px] font-medium text-gray-400">© 2026 AuthFlow Inc. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>

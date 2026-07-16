@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" class="w-32 h-32 mx-auto">
+  <defs>
+    <linearGradient id="error-grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF2F2" />
+      <stop offset="100%" stop-color="#FEE2E2" />
+    </linearGradient>
+    <linearGradient id="error-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#DC2626" />
+    </linearGradient>
+    <filter id="error-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#991B1B" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <!-- Background circular decorative elements -->
+  <circle cx="100" cy="100" r="80" fill="url(#error-grad-bg)" opacity="0.6" />
+  <circle cx="100" cy="100" r="60" fill="url(#error-grad-bg)" />
+  <circle cx="145" cy="65" r="10" fill="#FCA5A5" opacity="0.4" />
+  <circle cx="55" cy="140" r="12" fill="#F87171" opacity="0.3" />
+
+  <!-- Main Error Shield Group -->
+  <g filter="url(#error-shadow)">
+    <!-- Warning Sign Shield -->
+    <path d="M100 45 L155 70 V115 C155 145, 100 165, 100 165 C100 165, 45 145, 45 115 V70 L100 45 Z" fill="url(#error-grad-primary)" />
+    <!-- Alert Icon (!) -->
+    <rect x="96" y="75" width="8" height="32" rx="4" fill="#FFFFFF" />
+    <circle cx="100" cy="120" r="5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Sparkles / Floating cross marks -->
+  <path d="M50 70 L60 80 M60 70 L50 80" stroke="#EF4444" stroke-width="3" stroke-linecap="round" />
+  <path d="M145 125 L155 135 M155 125 L145 135" stroke="#F87171" stroke-width="3" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AuthFlow - Modern SaaS Authentication UI Kit Signup Page">
+  <title>Create Account - AuthFlow UI Kit</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <!-- Custom Subtle Grid Pattern Styles -->
+  <style>
+    .auth-bg {
+      background-color: #f9fafb;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(249, 250, 251, 1) 100%),
+        url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm20 20h20v20H20V20z' fill='%23e5e7eb' fill-opacity='.18' fill-rule='evenodd'/%3E%3C/svg%3E");
+    }
+    .link-underline {
+      position: relative;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #2563eb;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .link-underline:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  </style>
+</head>
+<body class="auth-bg text-gray-900 min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="w-full px-6 py-4 flex justify-between items-center absolute top-0 left-0 z-10">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <img src="assets/logo.svg" alt="AuthFlow Logo" class="w-8 h-8">
+      <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AuthFlow</span>
+    </a>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-grow flex items-center justify-center px-4 py-24 sm:px-6 lg:px-8">
+    <div class="w-full max-w-[460px] flex flex-col gap-8">
+      
+      <!-- Card Container -->
+      <div class="bg-white rounded-3xl border border-gray-200/80 shadow-2xl shadow-gray-200/50 p-8 sm:p-10 flex flex-col gap-6 transition-all duration-300 hover:shadow-gray-200/80">
+        
+        <!-- Welcome Section -->
+        <div class="text-center sm:text-left">
+          <div class="flex sm:justify-start justify-center mb-4">
+            <img src="assets/logo.svg" alt="AuthFlow Logo" class="w-10 h-10">
+          </div>
+          <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Create your account</h1>
+          <p class="text-sm text-gray-500 mt-1.5">Get started for free. No credit card required.</p>
+        </div>
+
+        <!-- Social logins -->
+        <div class="grid grid-cols-2 gap-3">
+          <button class="flex items-center justify-center gap-2 py-2.5 px-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 active:scale-[0.98] transition-all duration-200 text-sm font-medium text-gray-700 shadow-sm" aria-label="Sign up with Google">
+            <!-- Google SVG Icon -->
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+            </svg>
+            <span class="text-xs sm:text-sm">Google</span>
+          </button>
+          <button class="flex items-center justify-center gap-2 py-2.5 px-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 hover:border-gray-300 active:scale-[0.98] transition-all duration-200 text-sm font-medium text-gray-700 shadow-sm" aria-label="Sign up with GitHub">
+            <!-- GitHub SVG Icon -->
+            <svg class="w-4 h-4 text-gray-900" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+            <span class="text-xs sm:text-sm">GitHub</span>
+          </button>
+        </div>
+
+        <div class="relative flex py-1 items-center">
+          <div class="flex-grow border-t border-gray-200"></div>
+          <span class="flex-shrink mx-4 text-gray-400 text-xs font-semibold uppercase tracking-wider">Or register with</span>
+          <div class="flex-grow border-t border-gray-200"></div>
+        </div>
+
+        <!-- Form Section -->
+        <form action="verify-email.html" method="GET" class="flex flex-col gap-4">
+          <!-- Full Name Input -->
+          <div class="flex flex-col gap-1.5">
+            <label for="name" class="text-sm font-semibold text-gray-800 flex items-center gap-1">
+              Full Name <span class="text-red-500" title="Required">*</span>
+            </label>
+            <div class="relative group">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors duration-200">
+                <!-- User Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </span>
+              <input type="text" id="name" name="name" required placeholder="John Doe" 
+                class="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 hover:border-gray-300 transition-all duration-200">
+            </div>
+          </div>
+
+          <!-- Email Input -->
+          <div class="flex flex-col gap-1.5">
+            <label for="email" class="text-sm font-semibold text-gray-800 flex items-center gap-1">
+              Email Address <span class="text-red-500" title="Required">*</span>
+            </label>
+            <div class="relative group">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors duration-200">
+                <!-- Email Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </span>
+              <input type="email" id="email" name="email" required placeholder="name@company.com" 
+                class="w-full pl-10 pr-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 hover:border-gray-300 transition-all duration-200">
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="flex flex-col gap-1.5">
+            <label for="password" class="text-sm font-semibold text-gray-800 flex items-center gap-1">
+              Password <span class="text-red-500" title="Required">*</span>
+            </label>
+            <div class="relative group">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors duration-200">
+                <!-- Lock Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+              </span>
+              <input type="password" id="password" name="password" required placeholder="••••••••" 
+                class="w-full pl-10 pr-10 py-2.5 bg-white border border-gray-200 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 hover:border-gray-300 transition-all duration-200">
+            </div>
+            <!-- Password Strength helper text -->
+            <p class="text-[10px] text-gray-400 leading-normal mt-1">Must be at least 8 characters, and contain a combination of letters, numbers, and symbols.</p>
+          </div>
+
+          <!-- Confirm Password Input -->
+          <div class="flex flex-col gap-1.5">
+            <label for="confirm-password" class="text-sm font-semibold text-gray-800 flex items-center gap-1">
+              Confirm Password <span class="text-red-500" title="Required">*</span>
+            </label>
+            <div class="relative group">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-gray-400 group-focus-within:text-blue-600 transition-colors duration-200">
+                <!-- Shield Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                </svg>
+              </span>
+              <input type="password" id="confirm-password" name="confirm-password" required placeholder="••••••••" 
+                class="w-full pl-10 pr-10 py-2.5 bg-white border border-gray-200 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:border-blue-600 hover:border-gray-300 transition-all duration-200">
+            </div>
+          </div>
+
+          <!-- Terms Checkbox -->
+          <div class="flex items-start mt-1">
+            <label class="relative flex items-start cursor-pointer select-none">
+              <input type="checkbox" id="terms" required class="sr-only peer">
+              <!-- Custom Checkbox Box -->
+              <span class="w-5 h-5 mr-2.5 mt-0.5 border border-gray-200 rounded-md bg-white flex flex-shrink-0 items-center justify-center transition-all duration-200 peer-checked:bg-blue-600 peer-checked:border-blue-600 peer-focus-visible:ring-4 peer-focus-visible:ring-blue-600/10 hover:border-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3.5 h-3.5 text-white opacity-0 transition-opacity duration-200 peer-checked:opacity-100">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </span>
+              <span class="text-xs font-medium text-gray-500 leading-normal">
+                I agree to the 
+                <a href="#" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors link-underline">Terms of Service</a> 
+                and 
+                <a href="#" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors link-underline">Privacy Policy</a>.
+              </span>
+            </label>
+          </div>
+
+          <!-- Primary Submit Button -->
+          <button type="submit" class="w-full flex items-center justify-center gap-2 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm shadow-lg shadow-blue-600/15 hover:shadow-blue-600/25 active:scale-[0.99] hover:scale-[1.01] transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-600/20 mt-2">
+            Get started
+          </button>
+        </form>
+
+        <p class="text-sm text-gray-500 text-center mt-2">
+          Already have an account? 
+          <a href="index.html" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors link-underline">Sign in</a>
+        </p>
+
+      </div>
+
+      <!-- Footer Elements -->
+      <footer class="flex flex-col gap-4 text-center mt-4">
+        <div class="flex justify-center gap-6 text-xs font-medium text-gray-400">
+          <a href="#" class="hover:text-gray-600 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-600 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gray-600 transition-colors">Contact Support</a>
+        </div>
+        <p class="text-[11px] font-medium text-gray-400">© 2026 AuthFlow Inc. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+</html>

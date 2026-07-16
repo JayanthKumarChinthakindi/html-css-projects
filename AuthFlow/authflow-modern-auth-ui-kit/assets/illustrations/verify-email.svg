@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" class="w-32 h-32 mx-auto">
+  <defs>
+    <linearGradient id="email-grad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#D1FAE5" />
+    </linearGradient>
+    <linearGradient id="email-grad-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="email-grad-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <filter id="email-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#047857" flood-opacity="0.1" />
+    </filter>
+  </defs>
+  <!-- Background circular decorative elements -->
+  <circle cx="100" cy="100" r="80" fill="url(#email-grad-bg)" opacity="0.6" />
+  <circle cx="100" cy="100" r="60" fill="url(#email-grad-bg)" />
+  <circle cx="45" cy="65" r="10" fill="#A7F3D0" opacity="0.4" />
+  <circle cx="155" cy="140" r="12" fill="#6EE7B7" opacity="0.3" />
+
+  <!-- Main Envelope Group -->
+  <g filter="url(#email-shadow)">
+    <!-- Envelope Body -->
+    <rect x="50" y="75" width="100" height="65" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+    <!-- Envelope Back flap lines -->
+    <path d="M50 77 L100 110 L150 77" stroke="#CBD5E1" stroke-width="2" fill="none" />
+    <!-- Glowing green verification badge -->
+    <circle cx="100" cy="115" r="22" fill="url(#email-grad-primary)" />
+    <!-- Checkmark -->
+    <path d="M92 115 L97 120 L108 109" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+
+  <!-- Sparkles / Float elements -->
+  <path d="M150 60 L153 66 L160 67 L154 71 L156 78 L150 74 L144 78 L146 71 L140 67 L147 66 Z" fill="#FBBF24" />
+  <path d="M45 125 L47 129 L52 130 L48 132 L49 137 L45 134 L41 137 L42 132 L38 130 L43 129 Z" fill="#60A5FA" />
+</svg>
