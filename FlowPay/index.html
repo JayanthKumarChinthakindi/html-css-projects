@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowPay — Premium Global Payment Infrastructure</title>
+  <meta name="description" content="FlowPay is the modern financial infrastructure for scaling SaaS, enterprises, and startups. Accept payments, send payouts, and manage revenue globally.">
+  
+  <!-- Inter Font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styling for Custom Grids, Details Accordion, and Animations -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Background Grid Pattern */
+    .bg-grid-pattern {
+      background-size: 50px 50px;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+    }
+    
+    /* Custom Chevron Rotation for FAQ Details */
+    details[open] .chevron-icon {
+      transform: rotate(180deg);
+    }
+    
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    /* Hamburger Menu Animation via Checkbox Toggle */
+    #mobile-menu-toggle:checked ~ header #hamburger-line1 {
+      transform: translateY(6px) rotate(45deg);
+    }
+    #mobile-menu-toggle:checked ~ header #hamburger-line2 {
+      opacity: 0;
+    }
+    #mobile-menu-toggle:checked ~ header #hamburger-line3 {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    #mobile-menu-toggle:checked ~ #mobile-menu {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden relative bg-grid-pattern">
+
+  <!-- Glowing Background blobs -->
+  <div class="absolute top-[-200px] left-[-200px] w-[600px] h-[600px] bg-gradient-to-tr from-blue-300/20 to-indigo-300/30 rounded-full blur-3xl -z-20 pointer-events-none"></div>
+  <div class="absolute top-[400px] right-[-200px] w-[700px] h-[700px] bg-gradient-to-bl from-purple-300/20 to-cyan-200/20 rounded-full blur-3xl -z-20 pointer-events-none"></div>
+  <div class="absolute top-[1800px] left-[-300px] w-[800px] h-[800px] bg-gradient-to-r from-indigo-200/25 to-blue-200/25 rounded-full blur-3xl -z-20 pointer-events-none"></div>
+  <div class="absolute bottom-[200px] right-[-100px] w-[600px] h-[600px] bg-gradient-to-tr from-emerald-200/20 to-indigo-300/25 rounded-full blur-3xl -z-20 pointer-events-none"></div>
+
+  <!-- Mobile Menu Checkbox Toggle -->
+  <input type="checkbox" id="mobile-menu-toggle" class="hidden peer" />
+
+  <!-- 1. Sticky Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-lg bg-white/75 border-b border-slate-200/40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-lg py-1 px-2" aria-label="FlowPay Home">
+          <svg class="w-9 h-9 transition-transform group-hover:scale-105 duration-300" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18C6 11.3726 11.3726 6 18 6C24.6274 6 30 11.3726 30 18C30 24.6274 24.6274 30 18 30C15.5 30 13.2 29.2 11.3 27.9" stroke="url(#logo-grad-1)" stroke-width="4" stroke-linecap="round" />
+            <path d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C16.5 2 18.8 2.8 20.7 4.1" stroke="url(#logo-grad-2)" stroke-width="4" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="logo-grad-1" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4f46e5" />
+                <stop offset="1" stop-color="#06b6d4" />
+              </linearGradient>
+              <linearGradient id="logo-grad-2" x1="2" y1="2" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8b5cf6" />
+                <stop offset="1" stop-color="#3b82f6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-indigo-950">FlowPay</span>
+        </a>
+
+        <!-- Navigation Links (Desktop) -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Global Navigation">
+          <a href="#features" class="text-slate-600 hover:text-indigo-600 font-medium text-[15px] transition-colors duration-200 py-2">Features</a>
+          <a href="#showcase" class="text-slate-600 hover:text-indigo-600 font-medium text-[15px] transition-colors duration-200 py-2">Solutions</a>
+          <a href="#pricing" class="text-slate-600 hover:text-indigo-600 font-medium text-[15px] transition-colors duration-200 py-2">Pricing</a>
+          <a href="#faq" class="text-slate-600 hover:text-indigo-600 font-medium text-[15px] transition-colors duration-200 py-2">Resources</a>
+        </nav>
+
+        <!-- CTA Buttons (Desktop) -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium text-[15px] transition-colors duration-200 px-3 py-2">Login</a>
+          <a href="#pricing" class="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium text-[15px] px-5 py-2.5 rounded-full shadow-lg shadow-indigo-600/10 hover:shadow-indigo-600/25 transition-all duration-300 transform hover:-translate-y-[1px]">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Hamburger Icon Button (Mobile) -->
+        <label for="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 border border-slate-200 rounded-xl cursor-pointer bg-white/50 backdrop-blur-sm select-none focus-within:ring-2 focus-within:ring-indigo-500" aria-label="Toggle menu" role="button">
+          <span id="hamburger-line1" class="w-5 h-0.5 bg-slate-800 mb-1 transition-transform duration-300 ease-out origin-center rounded-full"></span>
+          <span id="hamburger-line2" class="w-5 h-0.5 bg-slate-800 mb-1 transition-opacity duration-200 ease-out rounded-full"></span>
+          <span id="hamburger-line3" class="w-5 h-0.5 bg-slate-800 transition-transform duration-300 ease-out origin-center rounded-full"></span>
+        </label>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Navigation Menu -->
+  <div id="mobile-menu" class="fixed inset-x-4 top-24 z-40 bg-white/95 border border-slate-200/60 backdrop-blur-xl py-6 px-6 rounded-2xl flex flex-col gap-4 invisible opacity-0 -translate-y-4 pointer-events-none transition-all duration-300 ease-out shadow-2xl md:hidden">
+    <nav class="flex flex-col gap-3" aria-label="Mobile Navigation">
+      <a href="#features" onclick="document.getElementById('mobile-menu-toggle').checked = false;" class="text-slate-700 hover:text-indigo-600 font-medium text-lg py-2 border-b border-slate-100 transition-colors">Features</a>
+      <a href="#showcase" onclick="document.getElementById('mobile-menu-toggle').checked = false;" class="text-slate-700 hover:text-indigo-600 font-medium text-lg py-2 border-b border-slate-100 transition-colors">Solutions</a>
+      <a href="#pricing" onclick="document.getElementById('mobile-menu-toggle').checked = false;" class="text-slate-700 hover:text-indigo-600 font-medium text-lg py-2 border-b border-slate-100 transition-colors">Pricing</a>
+      <a href="#faq" onclick="document.getElementById('mobile-menu-toggle').checked = false;" class="text-slate-700 hover:text-indigo-600 font-medium text-lg py-2 transition-colors">Resources</a>
+    </nav>
+    <div class="h-[1px] bg-slate-200/60 my-2"></div>
+    <div class="flex flex-col gap-3">
+      <a href="#" class="text-center text-slate-700 hover:text-indigo-600 font-medium text-lg py-2.5 border border-slate-200 rounded-xl transition-colors">Login</a>
+      <a href="#pricing" onclick="document.getElementById('mobile-menu-toggle').checked = false;" class="text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-lg py-3.5 rounded-xl shadow-lg shadow-indigo-600/10">Get Started</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-24 md:pt-20 lg:pb-32 overflow-visible relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Side: Copy and CTAs -->
+        <div class="lg:col-span-6 flex flex-col items-start text-left relative z-20">
+          <div class="inline-flex items-center gap-2.5 bg-indigo-50 border border-indigo-100 px-3.5 py-1.5 rounded-full mb-6 transform hover:scale-102 transition-transform duration-300">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+            </span>
+            <span class="text-indigo-800 font-semibold text-xs tracking-wide uppercase">Introducing FlowPay 2.0</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            The global payment rails for <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600">modern finance.</span>
+          </h1>
+          
+          <p class="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-normal max-w-xl">
+            FlowPay unites payment processing, global payouts, and multi-currency billing into a single, elegant platform. Scalable APIs meet beautiful developer tooling.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#pricing" class="w-full sm:w-auto text-center bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-indigo-600/25 hover:shadow-indigo-600/35 transition-all duration-300 transform hover:-translate-y-[2px]">
+              Get Started Now
+            </a>
+            <a href="#showcase" class="w-full sm:w-auto text-center bg-white/70 hover:bg-white active:bg-slate-50 border border-slate-200/80 backdrop-blur-sm text-slate-700 font-semibold px-8 py-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-[2px]">
+              Book a Demo
+            </a>
+          </div>
+
+          <!-- Customer trust text -->
+          <div class="mt-12 w-full pt-8 border-t border-slate-200/80">
+            <p class="text-sm font-semibold tracking-wider text-slate-400 uppercase">Trusted by industry disrupters</p>
+            <div class="mt-4 flex flex-wrap gap-x-8 gap-y-4 items-center">
+              <span class="text-lg font-bold text-slate-400 hover:text-slate-600 transition-colors cursor-default">Figma</span>
+              <span class="text-lg font-bold text-slate-400 hover:text-slate-600 transition-colors cursor-default">Linear</span>
+              <span class="text-lg font-bold text-slate-400 hover:text-slate-600 transition-colors cursor-default">Vercel</span>
+              <span class="text-lg font-bold text-slate-400 hover:text-slate-600 transition-colors cursor-default">Stripe-ish</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Floating Layered UI Cards Composition -->
+        <div class="lg:col-span-6 relative w-full h-[540px] md:h-[600px] flex items-center justify-center lg:mt-0 mt-8 overflow-visible select-none" aria-hidden="true">
+          
+          <!-- Background Glow Effect inside the Composition -->
+          <div class="absolute w-[400px] h-[400px] bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-3xl rounded-full -z-10"></div>
+          
+          <!-- MAIN CARD 1: Revenue Analytics Card (Center-Back) -->
+          <div class="absolute w-[340px] sm:w-[410px] bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl shadow-xl p-5 -rotate-2 -translate-y-12 translate-x-[-10px] z-10 transition-transform duration-500 hover:scale-[1.02] hover:-rotate-1">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+              <div>
+                <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Gross Volume</p>
+                <h4 class="text-2xl font-extrabold text-slate-900 mt-1">$142,384.20</h4>
+              </div>
+              <span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-full">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+                18.4%
+              </span>
+            </div>
+            
+            <!-- Sparkline visual representation -->
+            <div class="mt-4">
+              <svg class="w-full h-24 text-indigo-500" viewBox="0 0 100 30" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="sparkline-grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(99, 102, 241, 0.25)"></stop>
+                    <stop offset="100%" stop-color="rgba(99, 102, 241, 0.0)"></stop>
+                  </linearGradient>
+                </defs>
+                <path d="M0,25 Q15,15 30,22 T60,8 T85,12 T100,3 L100,30 L0,30 Z" fill="url(#sparkline-grad)"></path>
+                <path d="M0,25 Q15,15 30,22 T60,8 T85,12 T100,3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <circle cx="100" cy="3" r="2.5" fill="#4f46e5" stroke="white" stroke-width="1"></circle>
+              </svg>
+            </div>
+            <div class="flex items-center justify-between text-[11px] font-semibold text-slate-400 mt-2">
+              <span>July 10</span>
+              <span>July 16 (Today)</span>
+            </div>
+          </div>
+
+          <!-- CARD 2: FlowPay Credit Card Widget (Front-Left-Bottom) -->
+          <div class="absolute bottom-12 left-4 sm:left-12 w-[260px] h-[160px] bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950 text-white rounded-xl shadow-2xl p-5 rotate-6 z-30 transition-transform duration-500 hover:scale-105 hover:rotate-2">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[9px] font-semibold text-slate-400 tracking-widest uppercase">FlowPay Platinum</p>
+                <div class="w-8 h-6 bg-amber-500/20 border border-amber-500/30 rounded-md mt-2 flex items-center justify-center">
+                  <!-- Custom Chip Icon -->
+                  <div class="grid grid-cols-3 gap-0.5 w-6 h-4">
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                    <div class="bg-amber-400/40 rounded-sm"></div>
+                  </div>
+                </div>
+              </div>
+              <svg class="w-6 h-6 text-slate-300 opacity-60" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+              </svg>
+            </div>
+            <div class="mt-6">
+              <p class="text-sm font-semibold tracking-wider">••••  ••••  ••••  8829</p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <div>
+                <p class="text-[7px] text-slate-400 uppercase tracking-widest">Card Holder</p>
+                <p class="text-[10px] font-semibold mt-0.5">ACME SYSTEMS INC.</p>
+              </div>
+              <!-- MasterCard Style Logo -->
+              <div class="flex -space-x-2">
+                <div class="w-5 h-5 rounded-full bg-red-500 opacity-80"></div>
+                <div class="w-5 h-5 rounded-full bg-yellow-500 opacity-80"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3: Payment Success Notification (Top-Left-Top) -->
+          <div class="absolute top-16 left-2 sm:left-8 bg-white/95 border border-white/60 px-4 py-3 rounded-xl shadow-lg -rotate-6 z-35 flex items-center gap-3.5 transition-all duration-500 hover:scale-105 hover:-rotate-2">
+            <div class="w-8 h-8 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-500 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="text-left">
+              <p class="text-[10px] font-semibold text-slate-400">SUCCESSFUL CHARGE</p>
+              <p class="text-xs font-bold text-slate-800 mt-0.5">Received $1,420.00 from Sarah K.</p>
+            </div>
+          </div>
+
+          <!-- CARD 4: Customer Profile Card (Right-Bottom) -->
+          <div class="absolute bottom-16 right-2 sm:right-6 w-60 bg-white/95 backdrop-blur-md border border-white/50 rounded-xl p-3.5 shadow-xl -rotate-3 z-20 transition-all duration-500 hover:scale-105 hover:rotate-1">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-full bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-sm shrink-0">
+                OC
+              </div>
+              <div class="text-left flex-1 min-w-0">
+                <p class="text-xs font-bold text-slate-800 truncate">Olivia Chen</p>
+                <p class="text-[10px] text-slate-500 truncate">olivia@enterprise.com</p>
+              </div>
+              <span class="h-2 w-2 rounded-full bg-emerald-500 shrink-0"></span>
+            </div>
+            <div class="mt-3.5 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-semibold text-slate-400">
+              <span>Payout Schedule</span>
+              <span class="text-indigo-600 font-bold uppercase tracking-wider">Daily Instant</span>
+            </div>
+          </div>
+
+          <!-- CARD 5: Statistics Widget (Center-Bottom) -->
+          <div class="absolute bottom-2 left-1/3 bg-white/95 border border-white/50 px-4 py-2.5 rounded-xl shadow-md rotate-1 z-35 flex items-center gap-3 transition-transform duration-500 hover:scale-105">
+            <div class="w-7 h-7 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <div class="text-left">
+              <p class="text-[9px] font-semibold text-slate-400">SPEED RAIL</p>
+              <p class="text-xs font-bold text-slate-800">1.2s Avg Settlement</p>
+            </div>
+          </div>
+
+          <!-- CARD 6: Notification Popup (Top-Right-Top) -->
+          <div class="absolute top-8 right-6 bg-white/95 border border-white/40 px-3.5 py-2.5 rounded-xl shadow-lg rotate-12 z-25 flex items-center gap-2.5 transition-all duration-500 hover:scale-105 hover:rotate-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-500 animate-pulse"></span>
+            <span class="text-xs font-bold text-slate-800">New Subscriber! +$49/mo</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. Trusted By Section -->
+    <section class="border-y border-slate-200/60 bg-slate-50/50 py-12 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400">Empowering high-performance teams worldwide</p>
+        
+        <!-- Logo Row -->
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-65">
+          
+          <!-- Google -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Google">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.579-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.133 1 1.156 5.928 1.156 12s4.977 11 11.084 11c6.376 0 10.608-4.418 10.608-10.796 0-.727-.08-1.282-.177-1.919H12.24z"/>
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Google</span>
+          </div>
+
+          <!-- Microsoft -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Microsoft">
+            <div class="grid grid-cols-2 gap-0.5 w-4 h-4">
+              <div class="bg-[#f25022] w-1.5 h-1.5"></div>
+              <div class="bg-[#7fba00] w-1.5 h-1.5"></div>
+              <div class="bg-[#00a4ef] w-1.5 h-1.5"></div>
+              <div class="bg-[#ffb900] w-1.5 h-1.5"></div>
+            </div>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Microsoft</span>
+          </div>
+
+          <!-- Spotify -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Spotify">
+            <svg class="w-5 h-5 text-[#1DB954]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.982-.336.075-.668-.135-.744-.47-.077-.337.135-.668.47-.745 3.856-.88 7.15-.506 9.82 1.13.295.178.387.563.207.86zm1.225-2.72c-.227.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.08-1.182-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.67-1.114 8.24-.57 11.35 1.343.366.226.486.707.26 1.073zm.107-2.846C14.524 8.78 8.903 8.594 5.65 9.58c-.5.15-.1.026-.64-.226-.15-.5.225-.99.508-1.074 3.75-1.137 9.94-.925 14.35 1.694.45.267.6.848.33 1.3-.267.45-.848.6-1.3.33z"/>
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Spotify</span>
+          </div>
+
+          <!-- Shopify -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Shopify">
+            <svg class="w-5 h-5 text-[#96bf48]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.78 5.29L16 1.76a1.5 1.5 0 00-1.06-.44H9.06a1.5 1.5 0 00-1.06.44L4.22 5.29A1.5 1.5 0 003.8 6.4l2 12A1.5 1.5 0 007.27 19.6h9.46a1.5 1.5 0 001.47-1.2l2-12a1.5 1.5 0 00-.42-1.11zm-5.72-2.11L16 5.12h-4V3.18zm-4 0h2V5.12H8l2-1.94zM16 17.6H8l-1.5-9h11l-1.5 9z"/>
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Shopify</span>
+          </div>
+
+          <!-- Slack -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Slack">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523 2.528 2.528 0 0 1-2.522-2.523 2.528 2.528 0 0 1 2.522-2.52h2.52v2.52zm1.261 0a2.528 2.528 0 0 1 2.52-2.52h5.043a2.528 2.528 0 0 1 2.522 2.52v5.042a2.528 2.528 0 0 1-2.522 2.52H8.823a2.528 2.528 0 0 1-2.52-2.52v-5.042zM8.823 5.043a2.528 2.528 0 0 1 2.52-2.52 2.528 2.528 0 0 1 2.522 2.52v2.52h-2.522a2.528 2.528 0 0 1-2.52-2.52zm0 1.261a2.528 2.528 0 0 1 2.52 2.52v5.043a2.528 2.528 0 0 1-2.52 2.522H3.78a2.528 2.528 0 0 1-2.52-2.522V8.824a2.528 2.528 0 0 1 2.52-2.52h5.043zm10.135 3.78a2.528 2.528 0 0 1 2.52-2.522 2.528 2.528 0 0 1 2.522 2.522 2.528 2.528 0 0 1-2.522 2.52h-2.52v-2.52zm-1.262 0a2.528 2.528 0 0 1-2.52 2.52h-5.043a2.528 2.528 0 0 1-2.522-2.52V3.78a2.528 2.528 0 0 1 2.522-2.52h5.043a2.528 2.528 0 0 1 2.52 2.52v5.043zm-3.78 10.134a2.528 2.528 0 0 1-2.52 2.522 2.528 2.528 0 0 1-2.522-2.522v-2.52h2.522a2.528 2.528 0 0 1 2.52 2.52zm0-1.262a2.528 2.528 0 0 1-2.52-2.52v-5.043a2.528 2.528 0 0 1 2.52-2.522h5.043a2.528 2.528 0 0 1 2.52 2.522v5.043h-5.043z"/>
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Slack</span>
+          </div>
+
+          <!-- Adobe -->
+          <div class="filter grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer flex items-center gap-1.5" aria-label="Adobe">
+            <svg class="w-5 h-5 text-[#FF0000]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.58 2H22v15.22L14.58 2zM9.42 2H2v15.22L9.42 2zM12 9.17l5.35 11.08H13.6l-1.6-3.55h-3.4L12 9.17z"/>
+            </svg>
+            <span class="font-bold text-lg tracking-tight text-slate-700">Adobe</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Features Section -->
+    <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600">Fintech Platform Features</h2>
+        <p class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Everything you need to accept global payments</p>
+        <p class="mt-4 text-lg text-slate-600">A unified financial suite designed to optimize checkout rates, minimize processing friction, and support modern SaaS business models.</p>
+      </div>
+
+      <!-- Features Grid (6 Premium Cards) -->
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Fast Payments -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-indigo-600/5 hover:border-indigo-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-indigo-50 border border-indigo-100 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Fast Payments</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            Execute transactions in under 2 seconds. Multi-rail processing routes payments dynamically for minimal latency.
+          </p>
+        </div>
+
+        <!-- Card 2: Enterprise Security -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-purple-600/5 hover:border-purple-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-purple-50 border border-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Enterprise Security</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            PCI-DSS Level 1 compliant. End-to-end tokenization and advanced encryption keep customer data fully isolated.
+          </p>
+        </div>
+
+        <!-- Card 3: AI Insights -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-cyan-600/5 hover:border-cyan-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-cyan-50 border border-cyan-100 rounded-xl flex items-center justify-center text-cyan-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">AI Insights</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            Predict revenue trends, identify customer churn patterns, and optimize billing cycles using real-time machine learning.
+          </p>
+        </div>
+
+        <!-- Card 4: Team Collaboration -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-blue-600/5 hover:border-blue-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Team Collaboration</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            Granular access controls, multi-signature payouts, and shared dashboards designed for modern finance teams.
+          </p>
+        </div>
+
+        <!-- Card 5: Global Infrastructure -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-emerald-600/5 hover:border-emerald-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-emerald-50 border border-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h2a2.5 2.5 0 002.5-2.5V14a2 2 0 012-2h.09M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Global Infrastructure</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            Accept 135+ currencies across 180 countries. Dynamic routing automatically handles localized payment methods.
+          </p>
+        </div>
+
+        <!-- Card 6: Real-time Analytics -->
+        <div class="relative group bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-rose-600/5 hover:border-rose-100 hover:-translate-y-1.5 transition-all duration-300">
+          <div class="w-12 h-12 bg-rose-50 border border-rose-100 rounded-xl flex items-center justify-center text-rose-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900">Real-time Analytics</h3>
+          <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+            Instant visual reports, webhooks, and analytics streams. Monitor payment flows, refunds, and payouts in real-time.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Product Showcase Section -->
+    <section id="showcase" class="bg-slate-100/60 border-y border-slate-200/80 py-20 md:py-28 relative overflow-hidden">
+      
+      <!-- Backing Glowing Spot -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-tr from-indigo-500/10 via-purple-500/5 to-cyan-500/10 blur-3xl rounded-full -z-10"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600">Product Showcase</h2>
+          <p class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">The developer dashboard built for finance operations</p>
+          <p class="mt-4 text-lg text-slate-600">No integration is complete without a dashboard that scales. Give non-technical teams full visibility over refunds, payment statuses, and balance reports.</p>
+        </div>
+
+        <!-- Dashboard HTML Mockup -->
+        <div class="max-w-6xl mx-auto bg-white border border-slate-200 shadow-2xl rounded-2xl overflow-hidden flex flex-col md:flex-row h-[550px] md:h-[650px] transform hover:scale-[1.01] transition-transform duration-500">
+          
+          <!-- Mock Dashboard Sidebar -->
+          <aside class="w-full md:w-64 bg-slate-900 text-slate-400 p-5 flex flex-col justify-between border-r border-slate-800 shrink-0 md:block hidden">
+            <div>
+              <!-- Sidebar Logo -->
+              <div class="flex items-center gap-2 px-2 py-3">
+                <div class="w-6 h-6 rounded-md bg-indigo-500 flex items-center justify-center text-white font-extrabold text-xs">F</div>
+                <span class="text-white font-bold text-lg">FlowPay</span>
+              </div>
+              
+              <!-- Sidebar Menu -->
+              <nav class="mt-6 flex flex-col gap-1" aria-label="Sidebar navigation">
+                <a href="#" class="flex items-center gap-3 bg-slate-800 text-white font-medium text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  Overview
+                </a>
+                <a href="#" class="flex items-center gap-3 hover:bg-slate-800 hover:text-white text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                  </svg>
+                  Payments
+                </a>
+                <a href="#" class="flex items-center gap-3 hover:bg-slate-800 hover:text-white text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M12 16v1" />
+                  </svg>
+                  Balances
+                </a>
+                <a href="#" class="flex items-center gap-3 hover:bg-slate-800 hover:text-white text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  Customers
+                </a>
+                <a href="#" class="flex items-center gap-3 hover:bg-slate-800 hover:text-white text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+                  </svg>
+                  Reports
+                </a>
+                <a href="#" class="flex items-center gap-3 hover:bg-slate-800 hover:text-white text-sm px-3.5 py-2.5 rounded-lg transition-colors">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Settings
+                </a>
+              </nav>
+            </div>
+            
+            <!-- User Section inside Sidebar -->
+            <div class="border-t border-slate-800 pt-4 flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300 text-xs">JS</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-xs font-bold text-white truncate">Joe Smith</p>
+                <p class="text-[10px] text-slate-500 truncate">joe@acme.com</p>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Mock Dashboard Main Panel -->
+          <main class="flex-1 bg-slate-50 p-4 md:p-6 overflow-y-auto flex flex-col justify-between text-left">
+            
+            <!-- Topbar -->
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200/80">
+              <h3 class="text-lg font-bold text-slate-900">Dashboard Overview</h3>
+              <div class="flex items-center gap-3">
+                
+                <!-- Search input visual mockup -->
+                <div class="relative max-w-xs hidden sm:block">
+                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 pointer-events-none">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </span>
+                  <input type="text" placeholder="Search accounts..." class="w-44 lg:w-56 pl-9 pr-3.5 py-1.5 bg-white border border-slate-200 rounded-lg text-xs focus:outline-none" disabled>
+                </div>
+                
+                <!-- Notification Bell -->
+                <button class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-700" disabled>
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+              
+              <!-- Gross volume card -->
+              <div class="bg-white border border-slate-200/80 rounded-xl p-4 shadow-sm">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Gross Volume</span>
+                <div class="flex items-baseline justify-between mt-1">
+                  <span class="text-xl font-extrabold text-slate-900">$142,384.20</span>
+                  <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full">+12.4%</span>
+                </div>
+              </div>
+
+              <!-- Successful payments card -->
+              <div class="bg-white border border-slate-200/80 rounded-xl p-4 shadow-sm">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Success Rate</span>
+                <div class="flex items-baseline justify-between mt-1">
+                  <span class="text-xl font-extrabold text-slate-900">99.98%</span>
+                  <span class="text-[10px] font-bold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded-full">High</span>
+                </div>
+              </div>
+
+              <!-- Payout rate card -->
+              <div class="bg-white border border-slate-200/80 rounded-xl p-4 shadow-sm">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Average Settlement</span>
+                <div class="flex items-baseline justify-between mt-1">
+                  <span class="text-xl font-extrabold text-slate-900">1.24s</span>
+                  <span class="text-[10px] font-bold text-indigo-600 bg-indigo-50 px-1.5 py-0.5 rounded-full">Instant</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Lower Layout: Chart & Activity Feed -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6 flex-1 min-h-0">
+              
+              <!-- Chart Visual Area (8 columns on large screens) -->
+              <div class="lg:col-span-8 bg-white border border-slate-200/80 rounded-xl p-4 shadow-sm flex flex-col justify-between h-[220px] md:h-auto font-sans">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                  <span class="text-xs font-bold text-slate-800">Volume Stream</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                    <span class="text-[10px] text-slate-500 font-semibold">Credit Cards</span>
+                  </div>
+                </div>
+                
+                <!-- Mock SVG Line Graph -->
+                <div class="flex-1 mt-4 relative">
+                  <svg class="w-full h-full text-indigo-500" viewBox="0 0 100 40" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chart-glow-grad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(99, 102, 241, 0.25)"></stop>
+                        <stop offset="100%" stop-color="rgba(99, 102, 241, 0.0)"></stop>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,35 C15,20 20,38 35,18 C50,-2 60,30 75,12 C90,4 95,20 100,5 L100,40 L0,40 Z" fill="url(#chart-glow-grad)"></path>
+                    <path d="M0,35 C15,20 20,38 35,18 C50,-2 60,30 75,12 C90,4 95,20 100,5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <!-- Grid Lines visual representation -->
+                    <line x1="0" y1="10" x2="100" y2="10" stroke="#f1f5f9" stroke-width="0.5" />
+                    <line x1="0" y1="20" x2="100" y2="20" stroke="#f1f5f9" stroke-width="0.5" />
+                    <line x1="0" y1="30" x2="100" y2="30" stroke="#f1f5f9" stroke-width="0.5" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Activity Feed (4 columns) -->
+              <div class="lg:col-span-4 bg-white border border-slate-200/80 rounded-xl p-4 shadow-sm flex flex-col justify-between hidden lg:flex">
+                <span class="text-xs font-bold text-slate-800 border-b border-slate-100 pb-2 block">Recent Events</span>
+                <div class="flex-1 mt-3 flex flex-col gap-2.5 overflow-y-auto">
+                  
+                  <div class="flex items-center justify-between text-[11px] leading-tight border-b border-slate-50 pb-2">
+                    <div>
+                      <p class="font-bold text-slate-800">API Key Created</p>
+                      <p class="text-slate-400">By Joe S. • Web</p>
+                    </div>
+                    <span class="text-slate-400">12m ago</span>
+                  </div>
+
+                  <div class="flex items-center justify-between text-[11px] leading-tight border-b border-slate-50 pb-2">
+                    <div>
+                      <p class="font-bold text-slate-800">Chargeback Opened</p>
+                      <p class="text-slate-500 font-medium">Dispute #2934</p>
+                    </div>
+                    <span class="text-red-500 font-semibold">1h ago</span>
+                  </div>
+
+                  <div class="flex items-center justify-between text-[11px] leading-tight">
+                    <div>
+                      <p class="font-bold text-slate-800">Payout Completed</p>
+                      <p class="text-slate-400">Bank Transfer • $18k</p>
+                    </div>
+                    <span class="text-slate-400">3h ago</span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Table Area (Transactions) -->
+            <div class="mt-6 border border-slate-200/80 rounded-xl bg-white shadow-sm overflow-hidden flex-1 min-h-[140px] flex flex-col justify-between">
+              
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr class="bg-slate-50 text-slate-500 font-bold border-b border-slate-200/60">
+                      <th class="py-3 px-4">Customer</th>
+                      <th class="py-3 px-4">Payment Method</th>
+                      <th class="py-3 px-4">Date</th>
+                      <th class="py-3 px-4">Amount</th>
+                      <th class="py-3 px-4 text-right">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                    
+                    <tr class="hover:bg-slate-50 transition-colors">
+                      <td class="py-2.5 px-4 font-bold text-slate-900">Novasphere Inc.</td>
+                      <td class="py-2.5 px-4 flex items-center gap-1.5">
+                        <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-1.5 py-0.5 rounded">Visa</span>
+                      </td>
+                      <td class="py-2.5 px-4 text-slate-400">Jul 16, 22:15</td>
+                      <td class="py-2.5 px-4 font-semibold text-slate-850">$12,500.00</td>
+                      <td class="py-2.5 px-4 text-right">
+                        <span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Paid</span>
+                      </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 transition-colors">
+                      <td class="py-2.5 px-4 font-bold text-slate-900">Zenith Studio Ltd.</td>
+                      <td class="py-2.5 px-4 flex items-center gap-1.5">
+                        <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-1.5 py-0.5 rounded">Apple Pay</span>
+                      </td>
+                      <td class="py-2.5 px-4 text-slate-400">Jul 16, 21:04</td>
+                      <td class="py-2.5 px-4 font-semibold text-slate-850">$1,420.00</td>
+                      <td class="py-2.5 px-4 text-right">
+                        <span class="inline-flex items-center gap-1 bg-amber-50 text-amber-700 text-[10px] font-bold px-2 py-0.5 rounded-full">Pending</span>
+                      </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 transition-colors">
+                      <td class="py-2.5 px-4 font-bold text-slate-900">Acme Corp (Refund)</td>
+                      <td class="py-2.5 px-4 flex items-center gap-1.5">
+                        <span class="bg-indigo-50 text-indigo-700 text-[10px] font-bold px-1.5 py-0.5 rounded">Visa</span>
+                      </td>
+                      <td class="py-2.5 px-4 text-slate-400">Jul 16, 18:42</td>
+                      <td class="py-2.5 px-4 font-semibold text-slate-500">-$450.00</td>
+                      <td class="py-2.5 px-4 text-right">
+                        <span class="inline-flex items-center gap-1 bg-slate-100 text-slate-600 text-[10px] font-bold px-2 py-0.5 rounded-full">Refunded</span>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+          </main>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Statistics Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
+        
+        <!-- Stat 1 -->
+        <div class="flex flex-col items-center">
+          <div class="relative">
+            <span class="absolute -inset-2 bg-indigo-500/10 blur-xl rounded-full"></span>
+            <span class="relative text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-indigo-900">500K+</span>
+          </div>
+          <span class="mt-3 text-sm sm:text-base font-bold text-slate-500">Global Businesses</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="flex flex-col items-center">
+          <div class="relative">
+            <span class="absolute -inset-2 bg-purple-500/10 blur-xl rounded-full"></span>
+            <span class="relative text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-900">$8B+</span>
+          </div>
+          <span class="mt-3 text-sm sm:text-base font-bold text-slate-500">Annual Payouts</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="flex flex-col items-center">
+          <div class="relative">
+            <span class="absolute -inset-2 bg-cyan-500/10 blur-xl rounded-full"></span>
+            <span class="relative text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-cyan-900">99.99%</span>
+          </div>
+          <span class="mt-3 text-sm sm:text-base font-bold text-slate-500">API Uptime Guaranteed</span>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="flex flex-col items-center">
+          <div class="relative">
+            <span class="absolute -inset-2 bg-emerald-500/10 blur-xl rounded-full"></span>
+            <span class="relative text-4xl sm:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-emerald-950">180+</span>
+          </div>
+          <span class="mt-3 text-sm sm:text-base font-bold text-slate-500">Countries Handled</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Testimonials Section -->
+    <section class="bg-slate-100/40 border-y border-slate-200/60 py-20 md:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600">Client Reviews</h2>
+          <p class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Loved by high-growth startups</p>
+        </div>
+
+        <!-- Testimonial Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testimonial 1 -->
+          <div class="bg-white/80 backdrop-blur border border-slate-200/50 p-8 rounded-2xl shadow-lg shadow-slate-100/50 hover:shadow-xl hover:border-slate-200 transition-all duration-300 flex flex-col justify-between text-left">
+            <div>
+              <!-- Rating Stars -->
+              <div class="flex gap-1 text-amber-500 mb-6">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-base italic">
+                "FlowPay changed how we scale globally. We integrated the API in an afternoon and saw our checkout conversion rate increase by 14.8% in the first week."
+              </p>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-4">
+              <img class="w-11 h-11 rounded-full object-cover border border-indigo-100 shrink-0" src="assets/images/avatar_ceo.png" alt="Sarah Jenkins">
+              <div>
+                <p class="font-bold text-slate-900 text-sm">Sarah Jenkins</p>
+                <p class="text-xs text-slate-500 font-medium">CEO at Veloce</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white/80 backdrop-blur border border-slate-200/50 p-8 rounded-2xl shadow-lg shadow-slate-100/50 hover:shadow-xl hover:border-slate-200 transition-all duration-300 flex flex-col justify-between text-left">
+            <div>
+              <div class="flex gap-1 text-amber-500 mb-6">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-base italic">
+                "The security features and granular team permissions gave our compliance department complete peace of mind. Highly recommend their scaling plans."
+              </p>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-4">
+              <img class="w-11 h-11 rounded-full object-cover border border-purple-100 shrink-0" src="assets/images/avatar_cto.png" alt="David Thorne">
+              <div>
+                <p class="font-bold text-slate-900 text-sm">David Thorne</p>
+                <p class="text-xs text-slate-500 font-medium">CTO at Quantica</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white/80 backdrop-blur border border-slate-200/50 p-8 rounded-2xl shadow-lg shadow-slate-100/50 hover:shadow-xl hover:border-slate-200 transition-all duration-300 flex flex-col justify-between text-left">
+            <div>
+              <div class="flex gap-1 text-amber-500 mb-6">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-base italic">
+                "Accepting local payment methods across APAC and LATAM was a major challenge until we integrated FlowPay. Their global routing just works."
+              </p>
+            </div>
+            
+            <div class="mt-8 flex items-center gap-4 border-t border-slate-100 pt-4">
+              <img class="w-11 h-11 rounded-full object-cover border border-cyan-100 shrink-0" src="assets/images/avatar_vp.png" alt="Elena Rostova">
+              <div>
+                <p class="font-bold text-slate-900 text-sm">Elena Rostova</p>
+                <p class="text-xs text-slate-500 font-medium">VP of Finance at Novasphere</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. Pricing Section -->
+    <section id="pricing" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center relative">
+      <div class="max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600">Simple, Transparent Pricing</h2>
+        <p class="mt-4 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Flexible plans for companies of all sizes</p>
+        <p class="mt-4 text-lg text-slate-600">Get access to premium payout rails, robust developer tools, and round-the-clock support. Choose the plan that aligns with your scale.</p>
+      </div>
+
+      <!-- Pricing Cards Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+        
+        <!-- Starter Plan -->
+        <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-left flex flex-col justify-between h-[520px] transform hover:-translate-y-1">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+            <p class="mt-2 text-sm text-slate-500">Perfect for indie hackers, builders, and early startups.</p>
+            <div class="mt-6 flex items-baseline">
+              <span class="text-4xl font-extrabold text-slate-900">$29</span>
+              <span class="text-slate-500 font-medium text-sm ml-1.5">/ month</span>
+            </div>
+            
+            <ul class="mt-8 space-y-4 text-sm text-slate-600 font-medium" role="list">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Up to $20k monthly volume
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                1.4% + 20¢ transaction fee
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Standard payout speed (2 days)
+              </li>
+              <li class="flex items-center gap-3 text-slate-400">
+                <svg class="w-4 h-4 text-slate-350 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                No AI analytics insights
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <a href="#" class="block text-center w-full bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold py-3.5 px-4 rounded-xl border border-slate-200 transition-colors">
+              Get Started
+            </a>
+          </div>
+        </div>
+
+        <!-- Pro Plan (Featured) -->
+        <div class="relative rounded-2xl p-[2px] bg-gradient-to-br from-indigo-500 via-purple-500 to-cyan-500 shadow-2xl h-[560px] transform lg:scale-105 transition-all duration-300 hover:scale-[1.06] z-10 text-left">
+          <div class="bg-white rounded-[14px] p-8 h-full flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold text-slate-900">Pro</h3>
+                <span class="bg-indigo-50 text-indigo-700 font-extrabold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-full">Most Popular</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">For scaling startups and high-growth retail brands.</p>
+              <div class="mt-6 flex items-baseline">
+                <span class="text-4xl font-extrabold text-slate-900">$79</span>
+                <span class="text-slate-500 font-medium text-sm ml-1.5">/ month</span>
+              </div>
+              
+              <ul class="mt-8 space-y-4 text-sm text-slate-600 font-medium" role="list">
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Up to $250k monthly volume
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  0.8% + 15¢ transaction fee
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Instant Payout Rails (1.2s settlement)
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  AI revenue analytics dashboard
+                </li>
+              </ul>
+            </div>
+            <div class="mt-8">
+              <a href="#" class="block text-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-indigo-600/25 transition-all">
+                Start 14-Day Free Trial
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="bg-white border border-slate-200/80 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-left flex flex-col justify-between h-[520px] transform hover:-translate-y-1">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Enterprise</h3>
+            <p class="mt-2 text-sm text-slate-500">For global marketplace systems, multi-national rails, and high-volume platforms.</p>
+            <div class="mt-6 flex items-baseline">
+              <span class="text-4xl font-extrabold text-slate-900">Custom</span>
+            </div>
+            
+            <ul class="mt-8 space-y-4 text-sm text-slate-600 font-medium" role="list">
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Unlimited processing volume
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Custom volume discounts
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Dedicated support manager
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Custom contracts and SLA
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8">
+            <a href="#" class="block text-center w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 px-4 rounded-xl transition-colors">
+              Contact Sales
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. FAQ Section -->
+    <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+      <div class="text-center mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600">Frequently Asked Questions</h2>
+        <p class="mt-4 text-3xl font-extrabold text-slate-900">Got questions? We've got answers</p>
+      </div>
+
+      <!-- FAQ Accordions (visual accordion style using HTML <details>) -->
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-slate-800 hover:bg-slate-50/80 transition-colors select-none focus:outline-none focus:bg-slate-50">
+            <span>Is there a free trial?</span>
+            <span class="chevron-icon transition-transform duration-300 text-slate-400 group-hover:text-slate-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+            Yes, our Pro plan includes a 14-day free trial. You can configure APIs, process mock sandbox payments, and test instant payout features before your card is charged.
+          </div>
+        </details>
+
+        <!-- Accordion 2 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-slate-800 hover:bg-slate-50/80 transition-colors select-none focus:outline-none focus:bg-slate-50">
+            <span>Can I cancel anytime?</span>
+            <span class="chevron-icon transition-transform duration-300 text-slate-400 group-hover:text-slate-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+            Absolutely. FlowPay features month-to-month contracts. You can upgrade, downgrade, or cancel your subscription directly through the dashboard billing settings at any time without penalty.
+          </div>
+        </details>
+
+        <!-- Accordion 3 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-slate-800 hover:bg-slate-50/80 transition-colors select-none focus:outline-none focus:bg-slate-50">
+            <span>Is my data secure?</span>
+            <span class="chevron-icon transition-transform duration-300 text-slate-400 group-hover:text-slate-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+            FlowPay utilizes enterprise-grade security. We are PCI-DSS Level 1 compliant, which is the gold standard for global payment security. Your data is encrypted in transit and at rest using AES-256 protocols.
+          </div>
+        </details>
+
+        <!-- Accordion 4 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-slate-800 hover:bg-slate-50/80 transition-colors select-none focus:outline-none focus:bg-slate-50">
+            <span>Do you offer enterprise support?</span>
+            <span class="chevron-icon transition-transform duration-300 text-slate-400 group-hover:text-slate-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+            Yes! Our Enterprise clients receive dedicated account engineers, custom routing integrations, priority support queues, and signed Service Level Agreements (SLAs) with 99.99% uptime guarantees.
+          </div>
+        </details>
+
+        <!-- Accordion 5 -->
+        <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 cursor-pointer font-semibold text-slate-800 hover:bg-slate-50/80 transition-colors select-none focus:outline-none focus:bg-slate-50">
+            <span>What payment methods are accepted?</span>
+            <span class="chevron-icon transition-transform duration-300 text-slate-400 group-hover:text-slate-600">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+            FlowPay accepts all major credit/debit card issuers (Visa, Mastercard, Amex, Discover), mobile wallets (Apple Pay, Google Pay), global bank transfers (ACH, SEPA), and localized methods like iDEAL and Pix.
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- 10. CTA Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative overflow-visible">
+      
+      <!-- Blob glow decoration -->
+      <div class="absolute inset-0 bg-gradient-to-tr from-cyan-400/10 to-indigo-600/10 blur-3xl opacity-30 rounded-3xl -z-10"></div>
+      
+      <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-600 via-indigo-900 to-slate-900 text-white py-16 px-6 sm:px-12 md:py-20 md:px-20 shadow-2xl text-center">
+        
+        <!-- Visual background glowing lines -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gradient-to-bl from-cyan-400/20 to-blue-500/20 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">Ready to optimize your payment conversion?</h2>
+          <p class="mt-6 text-base sm:text-lg text-indigo-100 leading-relaxed font-normal max-w-xl mx-auto">
+            Join over 500,000+ businesses who leverage FlowPay to capture revenue, settle payments instantly, and build frictionless global checkouts.
+          </p>
+
+          <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#pricing" class="w-full sm:w-auto text-center bg-white hover:bg-slate-100 text-indigo-700 font-bold px-8 py-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+              Get Started for Free
+            </a>
+            <a href="#showcase" class="w-full sm:w-auto text-center bg-indigo-500/35 hover:bg-indigo-500/50 border border-indigo-400/40 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5">
+              Book Custom Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. Footer Section -->
+  <footer class="bg-slate-50 border-t border-slate-200 py-16 md:py-24 text-left relative z-15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        
+        <!-- Column 1: Brand Info -->
+        <div class="col-span-2 flex flex-col gap-4">
+          <a href="#" class="flex items-center gap-2.5 font-extrabold text-xl text-slate-900 focus:outline-none">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 18C6 11.3726 11.3726 6 18 6C24.6274 6 30 11.3726 30 18C30 24.6274 24.6274 30 18 30C15.5 30 13.2 29.2 11.3 27.9" stroke="url(#foot-grad-1)" stroke-width="4.5" stroke-linecap="round" />
+              <path d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C16.5 2 18.8 2.8 20.7 4.1" stroke="url(#foot-grad-2)" stroke-width="4.5" stroke-linecap="round" />
+              <defs>
+                <linearGradient id="foot-grad-1" x1="6" y1="6" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#4f46e5" />
+                  <stop offset="1" stop-color="#06b6d4" />
+                </linearGradient>
+                <linearGradient id="foot-grad-2" x1="2" y1="2" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#8b5cf6" />
+                  <stop offset="1" stop-color="#3b82f6" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>FlowPay</span>
+          </a>
+          <p class="text-xs text-slate-500 leading-relaxed font-normal max-w-[240px]">
+            FlowPay is the financial operating infrastructure for modern companies. We power payouts, fraud protection, and subscription billing globally.
+          </p>
+        </div>
+
+        <!-- Column 2: Product -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4">Product</h4>
+          <ul class="space-y-2.5 text-xs font-semibold text-slate-500" role="list">
+            <li><a href="#features" class="hover:text-indigo-600 transition-colors">Features</a></li>
+            <li><a href="#pricing" class="hover:text-indigo-600 transition-colors">Pricing</a></li>
+            <li><a href="#showcase" class="hover:text-indigo-600 transition-colors">Solutions</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">API Keys</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Company -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4">Company</h4>
+          <ul class="space-y-2.5 text-xs font-semibold text-slate-500" role="list">
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Customers</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Press Room</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Developers -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4">Developers</h4>
+          <ul class="space-y-2.5 text-xs font-semibold text-slate-500" role="list">
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Documentation</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">API Sandbox</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Github Repo</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">System Status</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Legal & Social -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest mb-4">Legal</h4>
+          <ul class="space-y-2.5 text-xs font-semibold text-slate-500" role="list">
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">Security Details</a></li>
+            <li><a href="#" class="hover:text-indigo-600 transition-colors">CCPA Privacy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Area -->
+      <div class="mt-16 pt-8 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-semibold text-slate-400">
+        <p>&copy; 2026 FlowPay Inc. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" aria-label="Twitter Profile" class="hover:text-indigo-600 transition-colors">Twitter</a>
+          <a href="#" aria-label="LinkedIn Profile" class="hover:text-indigo-600 transition-colors">LinkedIn</a>
+          <a href="#" aria-label="Discord Server" class="hover:text-indigo-600 transition-colors">Discord</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
